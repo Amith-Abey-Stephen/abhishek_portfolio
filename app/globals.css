@@ -327,12 +327,15 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:linear-gradie
 /* method scroll progress + active step (geometry set from JS-measured badge centers) */
 .method{position:relative}
 .method::before{content:"";position:absolute;left:var(--tl-x,61px);top:var(--tl-top,220px);height:var(--tl-h,400px);width:1px;background:rgba(255,255,255,.08)}
-#stepProgress{position:absolute;left:var(--tl-x,61px);top:var(--tl-top,220px);height:0;width:1px;background:linear-gradient(#fff,#888);z-index:2}
-.step{transition:opacity .5s}
+#stepProgress{position:absolute;left:var(--tl-x,61px);top:var(--tl-top,220px);height:0;width:1px;background:linear-gradient(#fff,#888);z-index:0}
+.step{position:relative;z-index:1;transition:opacity .5s}
 .step .browser{transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s}
 .step.active .browser{transform:translateY(-4px);box-shadow:0 30px 80px rgba(0,0,0,.6)}
 .step .jour{transition:background .4s,border-color .4s,transform .4s}
 .step.active .jour{background:#1e1e22;border-color:rgba(255,255,255,.3);transform:scale(1.06)}
+/* timeline rail: text sits right of the line so it never crosses words —
+   line threads badges + empty gutter only (measured --tl-x minus section pad) */
+.step-l h3,.step-l p,.step-l>.cta-white{margin-left:calc(var(--tl-x,61px) - 24px + 20px)}
 .browser{will-change:transform}
 /* case tilt on scroll (JS sets --tilt) */
 .case-hero{transform:rotate(var(--tilt,-2.5deg)) translateY(var(--lift,0px));transition:transform .2s ease-out;will-change:transform}
@@ -439,6 +442,7 @@ img.loaded{opacity:1}
 .modal-card{padding:22px}
 .modal-card h2{font-size:24px}
 .step{margin:60px 0;gap:30px}
+.step-l h3,.step-l p,.step-l>.cta-white{margin-left:calc(var(--tl-x,61px) - 16px + 18px)}
 .n-table{display:block;overflow-x:auto}
 .n-th,.n-tr{min-width:560px}
 .b-bar{overflow-x:auto;scrollbar-width:none}
