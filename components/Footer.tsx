@@ -5,9 +5,7 @@ export default function Footer() {
     <footer>
       <div className="f-in">
         <div className="f-brand">
-          Abhishek
-          <br />
-          .D<span>2026 © Abhishek.D, all rights reserved.</span>
+          Abhishek.D<span>2026 © Abhishek.D, all rights reserved.</span>
         </div>
         <div className="f-links">
           <a href="#cta">Contact</a>
