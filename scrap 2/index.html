@@ -1,893 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pilea - Agence de montage vidéo</title>
-  <meta name="description" content="Montage vidéo pour entrepreneurs, créateurs & entreprises. Tout inclus, prix fixes & retours illimités.">
-  <link rel="icon" href="https://framerusercontent.com/images/euH6EFrtZ3SUZsIB6U3c6RyzQI.png">
-
-  <!-- Google Fonts: Instrument Serif, Urbanist, Mona Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Mona+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilea — Agence de montage vidéo</title>
+<meta name="description" content="Montage vidéo pour entrepreneurs, créateurs & entreprises. Tout inclus & retours illimités.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="page-glow"></div>
 
-  <!-- Ambient Light Backdrops -->
-  <div class="ambient-glow"></div>
+<!-- NAV -->
+<header class="nav-wrap">
+  <nav class="nav-pill">
+    <div class="nav-left">
+      <a href="#methode">Méthode</a>
+      <a href="#tarif">Tarif</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#" class="nav-logo">Pilea Agency</a>
+    <a href="#cta" class="nav-btn" data-modal-open>Prendre rendez-vous</a>
+  </nav>
+</header>
 
-  <!-- FLOATING NAVIGATION BAR -->
-  <header class="header-wrapper">
-    <nav class="nav-pill" aria-label="Main Navigation">
-      <ul class="nav-links">
-        <li><a href="#methode">Méthode</a></li>
-        <li><a href="#tarif">Tarif</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-      <a href="#" class="nav-brand">Pilea Agency</a>
-      <a href="#booking" class="nav-cta">Prendre rendez-vous</a>
-    </nav>
-  </header>
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="guides"><i class="gl"></i><i class="gr"></i></div>
+  <h1 class="hero-h1">On crée vos<br><em>contenus vidéo.</em></h1>
+  <p class="hero-sub">Tout inclus, prix fixes &amp; retours illimités.</p>
+  <a href="#cta" class="cta-white" data-modal-open>Prendre rendez-vous</a>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-      <!-- Signature Dashed Guidelines -->
-      <div class="hero-guidelines">
-        <div class="guideline-left"></div>
-        <div class="guideline-right"></div>
+  <div class="hero-stage">
+    <div class="hero-hline"></div>
+    <!-- left comments -->
+    <div class="float-card fc-left">
+      <div class="fc-row">
+        <div class="fc-ava">🌐</div>
+        <div><div class="fc-name">Acme Labs</div><div class="fc-time">02:06</div>
+        <div class="fc-txt">La première partie est parfaite !<br>C'est validé</div><div class="fc-reply">Reply 👍</div></div>
       </div>
-
-      <div class="hero-content">
-        <h1 class="hero-title">
-          On crée vos
-          <span class="serif-italic">contenus vidéo.</span>
-        </h1>
-        <p class="hero-subtitle">
-          Tout inclus, prix fixes & retours illimités.
-        </p>
-        <a href="#booking" class="hero-cta-btn">Prendre rendez-vous</a>
-
-        <!-- Hero Video Preview Showcase -->
-        <div class="hero-video-container">
-          <!-- Floating Frame.io Feedback Card (Left) -->
-          <div class="floating-glass-card floating-comments">
-            <div class="comment-item">
-              <div class="comment-header">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                <span>Acme Labs</span>
-              </div>
-              <span class="comment-time">03:12</span>
-              <p class="comment-body">J'aime beaucoup cette transition !</p>
-              <span class="comment-reply">Reply 👍</span>
-            </div>
-            <div class="comment-item" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 8px;">
-              <div class="comment-header">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                <span>Acme Labs</span>
-              </div>
-              <span class="comment-time">06:54</span>
-              <p class="comment-body">Possible d'ajouter des émojis sur les sous-titres ?</p>
-              <span class="comment-reply">Reply 👍</span>
-            </div>
-          </div>
-
-          <!-- Central Video Mockup Wrapper -->
-          <div class="video-mockup-wrapper" data-video-trigger data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1">
-            <img src="https://framerusercontent.com/images/33nr3J5vimAyrOzEb3EAMX5Ozo.png" alt="Pilea Agency Hero Video Preview" class="hero-video-thumbnail">
-            <div class="video-overlay-gradient"></div>
-            <button class="hero-play-button" aria-label="Lire la vidéo de présentation">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-            <div class="video-bottom-tags">
-              <div class="tag-montage">
-                Montage
-                <span>vidéo</span>
-              </div>
-              <div class="tag-creation">
-                Création
-                <span>de contenu</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating Info Card (Right) -->
-          <div class="floating-glass-card floating-info">
-            <div class="info-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-              <span>Informations</span>
-            </div>
-            <div class="info-tags">
-              <span class="info-badge">⏱ 1:10</span>
-              <span class="info-badge">💾 9MB</span>
-              <span class="info-badge">📐 1920x1080</span>
-              <span class="info-badge">⚙️ MPEG4, H.264</span>
-            </div>
-          </div>
-
-          <!-- Bottom File badge -->
-          <div class="floating-glass-card floating-bottom-badge">
-            📄 AcmeLabs_023_VDEF.mp4
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIENT STRIP / TRUSTED CREATORS MARQUEE -->
-    <section class="client-strip-section" aria-label="Créateurs et marques partenaires">
-      <div class="marquee-track">
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/4SY1xz3JWfvdqbjIZrvHDimTEI.jpg" alt="Alexandre Calvez" class="marquee-avatar">
-          <span>Alexandre Calvez</span>
-          <span class="marquee-subs">+1.2M abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/5ckPi1gG7cFaPtJDKBtGmYg.jpeg" alt="Shubham Sharma" class="marquee-avatar">
-          <span>Shubham Sharma</span>
-          <span class="marquee-subs">+180k abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/7HvtoaoA332WgeA4LUZqNdKROBk.webp" alt="Matthieu Stephani" class="marquee-avatar">
-          <span>Matthieu Stephani</span>
-          <span class="marquee-subs">+41k abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/8ZQPuVXoDsSENHWvJ2EYD8eVlVA.webp" alt="Micode" class="marquee-avatar">
-          <span>Micode</span>
-          <span class="marquee-subs">+1.4M abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/4G0JP1S5pHztIVFYKKorfFSwiLg.jpg" alt="Better Creating" class="marquee-avatar">
-          <span>Better Creating</span>
-          <span class="marquee-subs">+157k abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/5MasCSQ4pVR4l1LejmAHSPlfA8.png" alt="MicroByFlo" class="marquee-avatar">
-          <span>MicroByFlo</span>
-          <span class="marquee-subs">+49k abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <span>Notion</span>
-        </div>
-        <div class="marquee-item">
-          <span>Deezer</span>
-        </div>
-        <div class="marquee-item">
-          <span>Submagic</span>
-        </div>
-
-        <!-- Duplicated items for infinite seamless looping -->
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/4SY1xz3JWfvdqbjIZrvHDimTEI.jpg" alt="Alexandre Calvez" class="marquee-avatar">
-          <span>Alexandre Calvez</span>
-          <span class="marquee-subs">+1.2M abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/5ckPi1gG7cFaPtJDKBtGmYg.jpeg" alt="Shubham Sharma" class="marquee-avatar">
-          <span>Shubham Sharma</span>
-          <span class="marquee-subs">+180k abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/7HvtoaoA332WgeA4LUZqNdKROBk.webp" alt="Matthieu Stephani" class="marquee-avatar">
-          <span>Matthieu Stephani</span>
-          <span class="marquee-subs">+41k abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/8ZQPuVXoDsSENHWvJ2EYD8eVlVA.webp" alt="Micode" class="marquee-avatar">
-          <span>Micode</span>
-          <span class="marquee-subs">+1.4M abonnés</span>
-        </div>
-        <div class="marquee-item">
-          <img src="https://framerusercontent.com/images/4G0JP1S5pHztIVFYKKorfFSwiLg.jpg" alt="Better Creating" class="marquee-avatar">
-          <span>Better Creating</span>
-          <span class="marquee-subs">+157k abonnés</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- VALUE PROPOSITION (4 COLUMNS) -->
-    <section class="features-section">
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon-title">
-            <span class="feature-icon">⚡</span>
-            <h3>Sans engagement</h3>
-          </div>
-          <p class="feature-desc">
-            Arrêtez-vous quand vous le voulez. Et bénéficiez d'une force de frappe activable à votre disposition.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-title">
-            <span class="feature-icon">🔀</span>
-            <h3>Matching de monteurs</h3>
-          </div>
-          <p class="feature-desc">
-            Nous attribuerons nos talents en fonction des codes de votre secteur d'activité ou du sujet abordé.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-title">
-            <span class="feature-icon">💬</span>
-            <h3>Interlocuteur dédié</h3>
-          </div>
-          <p class="feature-desc">
-            Un chef de projet vous sera attribué pour faciliter les échanges avec un hub en ligne et une ligne directe.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-title">
-            <span class="feature-icon">🎖️</span>
-            <h3>Monteurs vidéo qualifiés</h3>
-          </div>
-          <p class="feature-desc">
-            Chaque monteur/euse est testé et encadré pour vous garantir une qualité de production au top sur chaque vidéo.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SHOWCASE -->
-    <section class="portfolio-section" id="portfolio">
-      <div class="section-header">
-        <h2 class="section-title">
-          Nous avons réalisé
-          <span class="serif-italic">+ de 2 000 vidéos pour + de 250 clients.</span>
-        </h2>
-      </div>
-
-      <!-- Marquee Row 1 -->
-      <div class="portfolio-row row-1">
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/6InjRm0zzK3p80zNJwzRoOjtptg.png" alt="Plasticité cérébrale" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">YouTube</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/8Ck5k19ckft2IfR2vA2c8mqkMs.png" alt="GPT Vision" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">Tech & IA</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/6Z3F3uG7AotT9nf0lp87JXPKtMs.webp" alt="Follow Me Podcast" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">Podcast</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/8ePAZdrg9ILKZElVoK6TmaiILa0.png" alt="Short & TikTok" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">Short Format</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Repeated for seamless animation -->
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/6InjRm0zzK3p80zNJwzRoOjtptg.png" alt="Plasticité cérébrale" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">YouTube</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Marquee Row 2 -->
-      <div class="portfolio-row row-2">
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/8Ck5k19ckft2IfR2vA2c8mqkMs.png" alt="GPT-4 Vision" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">IA & Design</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/6Z3F3uG7AotT9nf0lp87JXPKtMs.webp" alt="Interview" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">Interview</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/33nr3J5vimAyrOzEb3EAMX5Ozo.png" alt="Studio Production" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">Studio</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-card" data-video-trigger>
-          <img src="https://framerusercontent.com/images/6InjRm0zzK3p80zNJwzRoOjtptg.png" alt="Plasticité cérébrale" class="portfolio-img">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-badge">YouTube</span>
-            <div class="portfolio-play-pill">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              <span>Regarder</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- METHOD IN 4 STEPS (MACOS WINDOW MOCKUP) -->
-    <section class="method-section" id="methode">
-      <div class="section-header">
-        <h2 class="section-title">
-          Grâce à une méthode
-          <span class="serif-italic">en 4 étapes...</span>
-        </h2>
-      </div>
-
-      <div class="method-mockup-window">
-        <!-- MacOS App Header -->
-        <div class="mockup-header-bar">
-          <div class="mockup-controls">
-            <span class="control-dot close"></span>
-            <span class="control-dot minimize"></span>
-            <span class="control-dot maximize"></span>
-          </div>
-          <div class="mockup-tabs">
-            <button class="mockup-tab-btn active" data-tab="tab-meet">
-              <span>📹</span> Google Meet
-            </button>
-            <button class="mockup-tab-btn" data-tab="tab-notion">
-              <span>📝</span> Notion
-            </button>
-            <button class="mockup-tab-btn" data-tab="tab-frameio">
-              <span>💬</span> Frame.io
-            </button>
-            <button class="mockup-tab-btn" data-tab="tab-youtube">
-              <span>▶️</span> YouTube & Réseaux
-            </button>
-          </div>
-        </div>
-
-        <!-- Tab Panes -->
-        <div class="mockup-body">
-          <!-- Step 1: Google Meet -->
-          <div class="tab-pane active" id="tab-meet">
-            <div class="tab-pane-content">
-              <span class="tab-step-badge">Étape 1 · Onboarding</span>
-              <h3 class="tab-title">Appel de cadrage & définition des objectifs</h3>
-              <p class="tab-desc">
-                Un échange de 30 minutes avec votre chef de projet pour comprendre votre univers, votre charte visuelle, votre audience cible et vos ambitions de publication.
-              </p>
-              <div class="tab-features-list">
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Analyse approfondie de votre chaîne & vos formats</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Mise en place de votre charte graphique et presets de montage</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Attribution de votre monteur dédié</span>
-                </div>
-              </div>
-            </div>
-            <div class="tab-visual-preview">
-              <img src="https://framerusercontent.com/images/33nr3J5vimAyrOzEb3EAMX5Ozo.png" alt="Google Meet Onboarding Mockup">
-            </div>
-          </div>
-
-          <!-- Step 2: Notion -->
-          <div class="tab-pane" id="tab-notion">
-            <div class="tab-pane-content">
-              <span class="tab-step-badge">Étape 2 · Centralisation</span>
-              <h3 class="tab-title">Votre espace de production dédié</h3>
-              <p class="tab-desc">
-                Déposez vos rushs, briefs et suivez l'avancement de chaque vidéo en temps réel sur un tableau Kanban limpide et connecté.
-              </p>
-              <div class="tab-features-list">
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Dépôt simple de vos rushs via Google Drive / Dropbox</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Suivi des statuts (En cours, En révision, Validé)</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Calendrier éditorial synchronisé</span>
-                </div>
-              </div>
-            </div>
-            <div class="tab-visual-preview">
-              <img src="https://framerusercontent.com/images/8Ck5k19ckft2IfR2vA2c8mqkMs.png" alt="Notion Production Hub">
-            </div>
-          </div>
-
-          <!-- Step 3: Frame.io -->
-          <div class="tab-pane" id="tab-frameio">
-            <div class="tab-pane-content">
-              <span class="tab-step-badge">Étape 3 · Feedback</span>
-              <h3 class="tab-title">Retours précis au timecode près</h3>
-              <p class="tab-desc">
-                Finies les listes interminables d'emails : commentez directement sur l'image pour indiquer exactement la coupe, l'effet ou l'annotation souhaitée.
-              </p>
-              <div class="tab-features-list">
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Retours illimités jusqu'à satisfaction complète</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Itérations rapides en 24h à 48h</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Versionnage clair (V1, V2, VDEF)</span>
-                </div>
-              </div>
-            </div>
-            <div class="tab-visual-preview">
-              <img src="https://framerusercontent.com/images/6InjRm0zzK3p80zNJwzRoOjtptg.png" alt="Frame.io Review Workspace">
-            </div>
-          </div>
-
-          <!-- Step 4: YouTube & Réseaux -->
-          <div class="tab-pane" id="tab-youtube">
-            <div class="tab-pane-content">
-              <span class="tab-step-badge">Étape 4 · Livraison</span>
-              <h3 class="tab-title">Prêt à publier sur toutes vos plateformes</h3>
-              <p class="tab-desc">
-                Export haute fidélité 4K, déclinaisons pour YouTube, TikTok, LinkedIn, Instagram Reels et vignettes captivantes prêtes à générer des vues.
-              </p>
-              <div class="tab-features-list">
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Export aux formats 16:9, 9:16 et 1:1</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Sous-titres dynamiques inclus (.srt et incrustés)</span>
-                </div>
-                <div class="tab-feature-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>Création de vignettes / miniatures sur-mesure</span>
-                </div>
-              </div>
-            </div>
-            <div class="tab-visual-preview">
-              <img src="https://framerusercontent.com/images/6Z3F3uG7AotT9nf0lp87JXPKtMs.webp" alt="Final Video Delivery">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES & SPOTLIGHT -->
-    <section class="case-study-section">
-      <div class="case-study-banner">
-        <h2 class="section-title" style="text-align: left;">
-          Ce qui a permis à
-          <span class="serif-italic">Shubham Sharma.</span>
-        </h2>
-        <button class="case-study-btn" data-video-trigger>
-          <span>Voir la vidéo</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-      </div>
-
-      <!-- Layered Visual Cards -->
-      <div class="angled-cards-container">
-        <div class="angled-card card-bg">
-          <img src="https://framerusercontent.com/images/33nr3J5vimAyrOzEb3EAMX5Ozo.png" alt="Shubham Sharma Video Project">
-        </div>
-        <div class="angled-card card-fg">
-          <img src="https://framerusercontent.com/images/8Ck5k19ckft2IfR2vA2c8mqkMs.png" alt="Shubham Sharma Case Study">
-        </div>
-      </div>
-
-      <!-- Role tags -->
-      <div class="role-pill-tags">
-        <span class="role-pill">Entrepreneuse</span>
-        <span class="role-pill">Docteur</span>
-        <span class="role-pill">Autrice</span>
-      </div>
-    </section>
-
-    <!-- REVIEWS GRID (MASONRY) -->
-    <section class="reviews-section">
-      <div class="section-header">
-        <h2 class="section-title">
-          Ainsi, que de diffuser
-          <span class="serif-italic">+ 10 000 publications sur tous les réseaux sociaux.</span>
-        </h2>
-      </div>
-
-      <div class="reviews-grid">
-        <!-- Review 1: Shubham Sharma -->
-        <div class="review-card">
-          <div class="reviewer-header">
-            <img src="https://framerusercontent.com/images/5ckPi1gG7cFaPtJDKBtGmYg.jpeg" alt="Shubham Sharma" class="reviewer-avatar">
-            <div class="reviewer-info">
-              <h4>Shubham Sharma</h4>
-              <p>Youtuber · +180k abonnés</p>
-            </div>
-          </div>
-          <p class="review-text">
-            « J'ai eu l'occasion de collaborer avec Jean-Baptiste et son agence pour réaliser une vidéo YouTube, qui est aujourd'hui la plus vue de ma chaîne avec près de 400 000 vues. Nous avons travaillé ensemble sur le montage, et le rendu est incroyable. Foncez les yeux fermés ! »
-          </p>
-        </div>
-
-        <!-- Review 2: Alexandre Calvez -->
-        <div class="review-card">
-          <div class="reviewer-header">
-            <img src="https://framerusercontent.com/images/4SY1xz3JWfvdqbjIZrvHDimTEI.jpg" alt="Alexandre Calvez" class="reviewer-avatar">
-            <div class="reviewer-info">
-              <h4>Alexandre Calvez</h4>
-              <p>Créateur de contenu · +1.2M abonnés</p>
-            </div>
-          </div>
-          <p class="review-text">
-            « L'équipe de Pilea est à l'écoute, réactive et sait faire face aux changements de dernière minute qui peuvent survenir lors des productions. Je les recommande à tous les créateurs qui ont besoin de déléguer tout ou partie de leur montage tout en ayant la garantie d'une ligne éditoriale respectée. »
-          </p>
-        </div>
-
-        <!-- Review 3: Fanny Nusbaum -->
-        <div class="review-card">
-          <div class="reviewer-header">
-            <img src="https://framerusercontent.com/images/7HvtoaoA332WgeA4LUZqNdKROBk.webp" alt="Fanny Nusbaum" class="reviewer-avatar">
-            <div class="reviewer-info">
-              <h4>Fanny Nusbaum</h4>
-              <p>Essayiste, conférencière & chercheur</p>
-            </div>
-          </div>
-          <p class="review-text">
-            « Qu'est-ce que j'ai aimé avec Pilea ? Fiou, tellement de choses. Ils sont sympas, ils sont vraiment fiables, c'est super important. Très carré et en plus ultra créatifs ce qui ne gâche rien ! »
-          </p>
-        </div>
-
-        <!-- Review 4: Jeremy Poletto -->
-        <div class="review-card">
-          <div class="reviewer-header">
-            <img src="https://framerusercontent.com/images/4G0JP1S5pHztIVFYKKorfFSwiLg.jpg" alt="Jeremy Poletto" class="reviewer-avatar">
-            <div class="reviewer-info">
-              <h4>Jeremy Poletto</h4>
-              <p>Spécialiste Meta Ads</p>
-            </div>
-          </div>
-          <p class="review-text">
-            « JB m'a accompagné dans la création de vidéos pour un client dans le e-commerce. Bonne communication, livrables nickels et délais respectés. Foncez si vous avez des besoins liés à la vidéo sur les réseaux sociaux. »
-          </p>
-        </div>
-
-        <!-- Review 5: Nathalie Poittevin -->
-        <div class="review-card">
-          <div class="reviewer-header">
-            <img src="https://framerusercontent.com/images/8ZQPuVXoDsSENHWvJ2EYD8eVlVA.webp" alt="Nathalie Poittevin" class="reviewer-avatar">
-            <div class="reviewer-info">
-              <h4>Nathalie Poittevin</h4>
-              <p>Praticienne</p>
-            </div>
-          </div>
-          <p class="review-text">
-            « Patience, écoute, disponibilité, tout est mis en place pour se sentir en confiance. Le rendu final est à la hauteur de mes espérances et mes vidéos touchent désormais un public bien plus large. »
-          </p>
-        </div>
-
-        <!-- Review 6: Querimont -->
-        <div class="review-card">
-          <div class="reviewer-header">
-            <img src="https://framerusercontent.com/images/5MasCSQ4pVR4l1LejmAHSPlfA8.png" alt="Querimont" class="reviewer-avatar">
-            <div class="reviewer-info">
-              <h4>Querimont</h4>
-              <p>Concept Store</p>
-            </div>
-          </div>
-          <p class="review-text">
-            « L'agence a réussi à créer l'ensemble du projet, elle a su capter l'image du concept, le tout avec une grande autonomie. Une vraie équipe de partenaires sur qui on peut se reposer. »
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOGO WALL & "VOTRE LOGO ?" -->
-    <section class="logo-wall-section">
-      <div class="logo-wall-grid">
-        <div class="logo-wall-item">Goodcity</div>
-        <div class="logo-wall-item">Passiaman</div>
-        <div class="logo-wall-item">Follow Me</div>
-        <div class="logo-wall-item">Jordane Saget</div>
-        <div class="logo-wall-item">La Micro by Flo</div>
-        <div class="logo-wall-item">Linagora</div>
-
-        <div class="logo-wall-item">Génération DIY</div>
-        <div class="logo-wall-item">[investir]</div>
-        <div class="logo-wall-item">Notion</div>
-        <div class="logo-wall-item">Meilleurtaux</div>
-        <div class="logo-wall-item">Submagic</div>
-        <div class="logo-wall-item">Orso Media</div>
-
-        <div class="logo-wall-item">NFT Business</div>
-        <div class="logo-wall-item">Abyssale</div>
-        <div class="votre-logo-badge">Votre logo ?</div>
-        <div class="logo-wall-item">Deezer</div>
-        <div class="logo-wall-item">Keepeek</div>
-
-        <div class="logo-wall-item">Lexipaie</div>
-        <div class="logo-wall-item">Eskimoz</div>
-        <div class="logo-wall-item">Stello</div>
-        <div class="logo-wall-item">Underscore_</div>
-        <div class="logo-wall-item">Smurfit Westrock</div>
-        <div class="logo-wall-item">Capsul</div>
-      </div>
-
-      <div class="arrow-caption-container">
-        <!-- SVG Curved Arrow -->
-        <svg class="curved-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 19V5M5 12l7 7 7-7"/>
-        </svg>
-        <p class="arrow-caption">
-          Ah voilà, <span class="serif-italic">juste ici.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- BOOKING & PRICING SECTION -->
-    <section class="booking-section" id="booking">
-      <div class="section-header">
-        <h2 class="section-title">
-          Mais, je vous rassure,
-          <span class="serif-italic">il nous reste de la place...</span>
-        </h2>
-      </div>
-
-      <div class="booking-widget-card" id="tarif">
-        <!-- Sidebar Info -->
-        <div class="booking-sidebar">
-          <div>
-            <span class="booking-host">Jean-Baptiste Rogé · Pilea</span>
-            <h3 class="booking-event-title">Appel découverte</h3>
-          </div>
-          <div class="booking-meta-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            <span>15 min</span>
-          </div>
-          <div class="booking-meta-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-            <span>Google Meet</span>
-          </div>
-          <div class="booking-meta-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span>Europe / Paris (CET)</span>
-          </div>
-          <p id="bookingSelectedSummary" style="font-size: 13px; color: var(--accent-blue); margin-top: auto; font-weight: 600;">
-            Sélectionné : 18 Octobre à 6:00pm
-          </p>
-        </div>
-
-        <!-- Calendar Month View -->
-        <div class="booking-calendar-view">
-          <div class="calendar-header">
-            <h4 class="calendar-month-title">Octobre 2026</h4>
-            <div style="display: flex; gap: 8px;">
-              <button style="color: var(--text-dim); padding: 4px 8px;">←</button>
-              <button style="color: var(--text-dim); padding: 4px 8px;">→</button>
-            </div>
-          </div>
-
-          <div class="calendar-grid">
-            <span class="calendar-day-header">LUN</span>
-            <span class="calendar-day-header">MAR</span>
-            <span class="calendar-day-header">MER</span>
-            <span class="calendar-day-header">JEU</span>
-            <span class="calendar-day-header">VEN</span>
-            <span class="calendar-day-header">SAM</span>
-            <span class="calendar-day-header">DIM</span>
-
-            <button class="calendar-day-btn disabled">12</button>
-            <button class="calendar-day-btn disabled">13</button>
-            <button class="calendar-day-btn disabled">14</button>
-            <button class="calendar-day-btn disabled">15</button>
-            <button class="calendar-day-btn disabled">16</button>
-            <button class="calendar-day-btn disabled">17</button>
-            <button class="calendar-day-btn selected">18</button>
-
-            <button class="calendar-day-btn">19</button>
-            <button class="calendar-day-btn">20</button>
-            <button class="calendar-day-btn">21</button>
-            <button class="calendar-day-btn">22</button>
-            <button class="calendar-day-btn">23</button>
-            <button class="calendar-day-btn">24</button>
-            <button class="calendar-day-btn">25</button>
-
-            <button class="calendar-day-btn">26</button>
-            <button class="calendar-day-btn">27</button>
-            <button class="calendar-day-btn">28</button>
-            <button class="calendar-day-btn">29</button>
-            <button class="calendar-day-btn">30</button>
-            <button class="calendar-day-btn">31</button>
-            <button class="calendar-day-btn disabled">1</button>
-          </div>
-        </div>
-
-        <!-- Available Time Slots -->
-        <div class="booking-slots-view">
-          <button class="slot-item-btn selected">6:00pm</button>
-          <button class="slot-item-btn">6:15pm</button>
-          <button class="slot-item-btn">6:30pm</button>
-          <button class="slot-item-btn">6:45pm</button>
-          <button class="slot-item-btn">7:00pm</button>
-          <button class="slot-item-btn">7:15pm</button>
-          <button class="slot-item-btn">7:30pm</button>
-          <button class="slot-item-btn">7:45pm</button>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="mailto:jb@pilea.agency" class="nav-cta" style="font-size: 15px; padding: 12px 28px;">
-          Contacter par mail · jb@pilea.agency
-        </a>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq-section" id="faq">
-      <div class="section-header">
-        <h2 class="section-title">
-          Questions
-          <span class="serif-italic">fréquentes.</span>
-        </h2>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item open">
-          <button class="faq-question-btn">
-            <span>Quel est le délai moyen de livraison d'une vidéo ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Pour un format court (Reels, TikTok, Shorts), le délai de livraison moyen de la première version est de 24h à 48h ouvrées. Pour les formats longs YouTube ou podcasts, comptez entre 48h et 72h.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question-btn">
-            <span>Comment fonctionnent les retours illimités ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Directement via notre interface Frame.io : vous pointez l'endroit exact sur la vidéo et laissez votre commentaire. Votre monteur applique les ajustements jusqu'à ce que le résultat corresponde à 100% à vos attentes.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question-btn">
-            <span>Y a-t-il un engagement de durée ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Non, aucun engagement. Vous pouvez activer notre équipe sur un projet ponctuel ou souscrire à un abonnement mensuel annulable ou mettable en pause à tout moment en un simple clic.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question-btn">
-            <span>Quels types de rushs et fichiers prenez-vous en charge ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Tous les formats : fichiers bruts caméra (Sony, Canon, Blackmagic, RED, iPhone ProRes), enregistrements d'écrans, pistes audios multipistes et fichiers graphiques. Vous déposez tout dans votre dossier sécurisé.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question-btn">
-            <span>Qui est mon interlocuteur au quotidien ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Vous avez un chef de projet dédié qui supervise vos créations, veille au respect de votre charte graphique et assure le lien continu avec les monteurs pour une expérience ultra fluide.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h3>Pilea Agency</h3>
-          <p>L'agence de montage vidéo pour les créateurs, entreprises & leaders d'opinion.</p>
-        </div>
-
-        <div class="footer-nav-groups">
-          <div class="footer-nav-col">
-            <h5>Navigation</h5>
-            <ul>
-              <li><a href="#methode">Méthode</a></li>
-              <li><a href="#tarif">Tarifs & Booking</a></li>
-              <li><a href="#portfolio">Réalisations</a></li>
-              <li><a href="#faq">FAQ</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-nav-col">
-            <h5>Contact & Légal</h5>
-            <ul>
-              <li><a href="mailto:jb@pilea.agency">jb@pilea.agency</a></li>
-              <li><a href="#">Mentions Légales</a></li>
-              <li><a href="#">Confidentialité</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Pilea Agency. Tous droits réservés.</p>
-        <button class="back-to-top-btn" id="backToTopBtn">
-          <span>Remonter en haut</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-        </button>
+      <div class="fc-sep"></div>
+      <div class="fc-row">
+        <div class="fc-ava">🌐</div>
+        <div><div class="fc-name">Acme Labs</div><div class="fc-time">06:17</div>
+        <div class="fc-txt">Super idée de mettre les deux plans côte à côte à ce moment-là !</div><div class="fc-reply">Reply 👍</div></div>
       </div>
     </div>
-  </footer>
+    <!-- center video -->
+    <div class="hero-video" data-modal-open>
+      <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1600&auto=format&fit=crop" alt="Studio Pilea">
+      <div class="hv-shade"></div>
+      <button class="hv-play" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <div class="hv-top">Jean-Baptiste Rogé <span>• 18 sept. 2026</span></div>
+    </div>
+    <!-- right info -->
+    <div class="float-card fc-right">
+      <div class="fc-head">ⓘ Informations</div>
+      <div class="fc-badges"><span>◷ 1:10</span><span>⇩ 9MB</span><span>❐ 1920x1080</span><span>≡ MPEG4, H.264</span></div>
+      <div class="fc-status"><span>État de la vidéo</span><b>Prêt à être publié</b></div>
+      <div class="fc-status"><span>Plateforme de publication</span><div class="fc-plats"><i>LinkedIn</i><i>Youtube</i><i>Instagram</i><i>TikTok</i><i>Facebook</i></div></div>
+      <div class="fc-status row"><span>Édition finale</span><b class="check">✓</b></div>
+    </div>
+    <div class="hero-file">AcmeLabs_023_VDEF.mp4</div>
+  </div>
+</section>
 
-  <!-- VIDEO MODAL DIALOG -->
-  <div class="video-modal-backdrop" id="videoModal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
-    <div class="video-modal-content">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fermer la vidéo">✕</button>
-      <iframe class="modal-video-frame" id="modalVideoFrame" src="" title="Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- CREATORS MARQUEE -->
+<section class="creators">
+  <div class="marquee" id="marquee1">
+    <div class="mq-track">
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=12"><b>Podcast Monde Numérique</b><small>+4k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=5"><b>Follow me</b><small>+1.7k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=13"><b>Jordane Saget</b><small>+2.4M abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=32"><b>MicroByFlo</b><small>+49k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=59"><b>Miccode</b><small>+1.4M abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=15"><b>Matthias Frank</b><small>+14k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=53"><b>Wakz</b><small>+132k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=8"><b>Better Creating</b><small>+157k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=11"><b>Matthieu Stephani</b><small>+41k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=3"><b>Alexandre Calvez</b><small>+1.2M abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=60"><b>Shubham Sharma</b><small>+180k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=12"><b>Podcast Monde Numérique</b><small>+4k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=5"><b>Follow me</b><small>+1.7k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=13"><b>Jordane Saget</b><small>+2.4M abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=32"><b>MicroByFlo</b><small>+49k abonnés</small></span>
+      <span class="mq-pill"><img src="https://i.pravatar.cc/40?img=59"><b>Miccode</b><small>+1.4M abonnés</small></span>
+    </div>
+  </div>
+  <h2 class="sec-h">Nous avons réalisé<br><em>+ de 2 000 vidéos pour + de 250 clients.</em></h2>
+  <div class="cta-center"><a href="#cta" class="cta-white sm" data-modal-open>Prendre rendez-vous</a></div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="work">
+  <div class="work-row">
+    <div class="w-track t1">
+      <img src="https://picsum.photos/seed/pilea1/560/315"><img src="https://picsum.photos/seed/pilea2/560/315"><img src="https://picsum.photos/seed/pilea3/560/315"><img src="https://picsum.photos/seed/pilea4/560/315"><img src="https://picsum.photos/seed/pilea5/560/315">
+      <img src="https://picsum.photos/seed/pilea1/560/315"><img src="https://picsum.photos/seed/pilea2/560/315"><img src="https://picsum.photos/seed/pilea3/560/315"><img src="https://picsum.photos/seed/pilea4/560/315"><img src="https://picsum.photos/seed/pilea5/560/315">
+    </div>
+  </div>
+  <div class="work-row">
+    <div class="w-track t2">
+      <img src="https://picsum.photos/seed/pilea6/560/315"><img src="https://picsum.photos/seed/pilea7/560/315"><img src="https://picsum.photos/seed/pilea8/560/315"><img src="https://picsum.photos/seed/pilea9/560/315"><img src="https://picsum.photos/seed/pilea10/560/315">
+      <img src="https://picsum.photos/seed/pilea6/560/315"><img src="https://picsum.photos/seed/pilea7/560/315"><img src="https://picsum.photos/seed/pilea8/560/315"><img src="https://picsum.photos/seed/pilea9/560/315"><img src="https://picsum.photos/seed/pilea10/560/315">
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="feats">
+    <div><h4>⚡ Sans engagement</h4><p>Arrêtez-vous quand vous le voulez. Et bénéficiez d'une force de frappe activable à votre disposition.</p></div>
+    <div><h4>⁘ Matching de monteurs</h4><p>Nous attribuerons nos talents en fonction des codes de votre secteur d'activité ou du sujet abordé.</p></div>
+    <div><h4>💬 Interlocuteur dédié</h4><p>Un chef de projet vous sera attribué pour faciliter les échanges avec un hub en ligne et une ligne directe.</p></div>
+    <div><h4>♛ Monteurs vidéo qualifiés</h4><p>Chaque monteur/euse est testé et encadré par vous garantir une qualité de production au top sur chaque vidéo.</p></div>
+  </div>
+</section>
+
+<!-- METHODE -->
+<section class="method" id="methode">
+  <h2 class="sec-h left">Grâce à une méthode<br><em>en 4 étapes…</em></h2>
+
+  <div class="step">
+    <div class="step-l"><div class="jour">Jour<small>1</small></div><h3>On se rencontre</h3><p>Un appel en visioconférence pour comprendre votre projet et préparer votre prochaine vidéo.</p><a class="cta-white sm" data-modal-open>Prendre rendez-vous</a></div>
+    <div class="browser"><div class="b-bar"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="b-tabs"><b class="on">◉ Google Meet</b><b>Notion</b><b>Frame.io</b><b>▶ YouTube</b></span></div><div class="b-body meet"><img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=1200&auto=format&fit=crop"><div class="meet-ctl"><span>◀</span><span class="big">▶</span><span>▶|</span></div><div class="meet-names"><span>Jean-Baptiste Rogé</span><span>Pierre - AcmeLabs</span></div></div></div>
+  </div>
+
+  <div class="step">
+    <div class="step-l"><div class="jour">Jour<small>2</small></div><h3>Le projet démarre</h3><p>Suivez l'avancement du projet sur votre portail client.</p><a class="cta-white sm" data-modal-open>Prendre rendez-vous</a></div>
+    <div class="browser"><div class="b-bar"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="b-tabs"><b>◉ Google Meet</b><b class="on">Notion</b><b>Frame.io</b><b>▶ YouTube</b></span></div><div class="b-body notion"><div class="n-title">🌐 HUB - AcmeLabs x Pilea</div><div class="n-table"><div class="n-th"><span>STATUS</span><span>PROJET</span><span>FICHIERS BRUTS</span><span>LIVRABLES</span><span>TÂCHES</span></div><div class="n-tr"><span class="st blue">In Progress</span><span>202308YTB_GptVision</span><span></span><span>https://f.io/4m..</span><span>☐ Faire les retours sur Frame</span></div><div class="n-tr"><span class="st orange">Potential</span><span>20241ADS_StoriesInsta</span><span></span><span>https://f.io/4m..</span><span>☐ Écrire des concepts d'ads</span></div><div class="n-tr"><span class="st green">Success</span><span>20230930VSL_OldHomepage</span><span></span><span>https://f.io/4m..</span><span>☐ Monter la VSL ☐ Compresser la VSL</span></div></div><div class="n-kanban"><div class="kcol"><b>● Idée 6</b><i>Comment produire plus de vidéos en moins de temps</i><i>Que faire quand on a perdu les fichiers d'une carte sd ?</i></div><div class="kcol"><b>● À tourner 2</b><i>Comment incarner sa marque sans se bloquer…</i></div><div class="kcol"><b>● À produire 3</b><i>Je veux garder mon indépendance de créateur…</i></div><div class="kcol"><b>● En production 1</b><i>Si j'avais un studio dans mes bureaux…</i></div></div></div></div>
+  </div>
+
+  <div class="step">
+    <div class="step-l"><div class="jour">Jour<small>4</small></div><h3>La vidéo avance</h3><p>Si besoin, vous pourrez faire vos retours sur la vidéo en 1 minute grâce à une interface intuitive.</p><a class="cta-white sm" data-modal-open>Prendre rendez-vous</a></div>
+    <div class="browser"><div class="b-bar"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="b-tabs"><b>◉ Google Meet</b><b>Notion</b><b class="on">Frame.io</b><b>▶ YouTube</b></span></div><div class="b-body frame"><div class="f-file">‹ YTB_ACME-AirFryer.mp4 <span>Approved Share</span></div><img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=1200&auto=format&fit=crop"><div class="f-comments"><div><b>Pierre - Acme Labs 02:06</b><p>Possible d'ajouter des sous-titres ?</p></div><div><b>Pierre - Acme Labs 04:21</b><p>C'est parfait ! J'adore l'idée</p></div></div></div></div>
+  </div>
+
+  <div class="step">
+    <div class="step-l"><div class="jour">Jour<small>10</small></div><h3>La vidéo est prête</h3><p>Récupérez votre vidéo en haute qualité et au bon format et préparez vous à la diffuser.</p><a class="cta-white sm" data-modal-open>Prendre rendez-vous</a></div>
+    <div class="browser"><div class="b-bar"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="b-tabs"><b>◉ Google Meet</b><b>Notion</b><b>Frame.io</b><b class="on">▶ YouTube</b></span></div><div class="b-body yt"><div class="yt-head">▶ YouTube <span>Rechercher 🔍</span></div><img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=1200&auto=format&fit=crop"><div class="yt-bar"><i></i></div><div class="yt-title">Le air fryer le plus cher est-il vraiment le plus efficace ?<br><small>AcmeLabs 1.23M subscribers • 244K views - 6 months ago • 6.7K 👍</small></div></div></div>
+  </div>
+</section>
+
+<!-- CASE SHUBHAM -->
+<section class="case">
+  <div class="case-top"><h2 class="sec-h left">Ce qui a permis à<br><em>Shubham Sharma.</em></h2><a class="dark-pill" data-modal-open>Voir la vidéo</a></div>
+  <div class="case-hero"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1600&auto=format&fit=crop"><div class="case-tags"><span>Youtubeur</span><span>Créateur de contenu</span><span>180 000 abonnés</span></div></div>
+  <div class="case-split"><div>De publier une des vidéos</div><div>Les plus vue de sa chaîne</div></div>
+  <div class="invoice">
+    <div class="inv-row"><span>Total HT</span><b>860 €</b></div>
+    <div class="inv-row"><span>Total TTC</span><b>1032 €</b></div>
+    <div class="inv-grid"><div>👥 +5 000 abonnés<br><small>en une vidéo</small></div><div>👁 32 500 h. de watchtime<br><small>4 300 h. en moyenne</small></div><div>▶ 1 / 10 classement<br><small>par vue Youtube</small></div></div>
+  </div>
+  <div class="testi"><div class="t-ava"><img src="https://i.pravatar.cc/200?img=60"><span class="t-play">▶</span></div><div class="t-name">Shubam Sharma</div><p class="t-quote">"JB et son équipe, franchement sont des experts.<br>Ils savent exactement comment fonctionne Youtube !"</p><a class="cta-white" data-modal-open>Prendre rendez-vous</a></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <h2 class="sec-h">Ainsi, que de diffuser<br><em>+ 10 000 publications sur tous les réseaux sociaux.</em></h2>
+  <div class="rev-grid">
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=5"><div><b>Nicolas Petit</b><small>Boucherie OhlaVache Reims</small></div></div><p>On a fait beaucoup de tournages récurrents dans la boucherie. Et, on a gagné avec ça des millions de vues et surtout beaucoup de clients.</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=47"><div><b>Lucie Marcolongo</b><small>Content Marketing Manager @MarkC</small></div></div><p>Jean-Baptiste est une personne très pro, empathique et a beaucoup d'expertise dans son domaine! N'hésitez pas à travailler avec lui</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=32"><div><b>Lou Attal</b><small>Consultante certifiée Notion</small></div></div><p>Pilea m'aide pour beaucoup de choses. À commencer par ma chaîne Youtube, ils sont là depuis le début. Autant sur les conseils pour le matériel, que sur la production vidéo.</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=15"><div><b>Jérôme Colombain</b><small>Podcasteur @MondeNumérique</small></div></div><p>Une équipe dynamique, compétente et sérieuse. Super boulot !</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=8"><div><b>Frédéric Hermelin</b><small>Head of Communication</small></div></div><p>Un reportage photo / vidéo rondement mené tout en agilité pour une soirée officielle qui aura su marquer les esprits ! Et en bonus offert le speach du Ministre ! Un grand MERCI à l'équipe 👍</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=44"><div><b>Fanny Nusbaum</b><small>Essayiste, conférencière, chercheur, psychologue</small></div></div><p>Qu'est-ce que j'ai aimé avec Pilea ? Fiou, tellement de choses. Ils sont sympas, ils sont vraiment fiables, c'est super important. Très carré et en plus ultra créatifs ce qui ne gâche rien !</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=13"><div><b>Querimont</b><small>Concept Store</small></div></div><p>L'agence a réussi à créer l'ensemble du projet, elle a su capter l'image du concept, le tout avec une grande autonomie.</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=26"><div><b>SCP Béatrice Bosserelle</b><small>Commissaire de Justice</small></div></div><p>Merci pour la réactivité, le suivi, la disponibilité et la satisfaction du résultat. Je continuerai à faire appel</p></div>
+    <div class="rev"><div class="rev-h"><img src="https://i.pravatar.cc/64?img=59"><div><b>DaLorenzo</b><small>Ristorante ITALY</small></div></div><p>They made a great job, WITH love and Passion in this work !</p></div>
+  </div>
+</section>
+
+<!-- CASE FANNY -->
+<section class="case">
+  <div class="case-top"><h2 class="sec-h left">Ou encore d'aider<br><em>Fanny Nusbaum.</em></h2><a class="dark-pill" data-modal-open>Voir les vidéos</a></div>
+  <div class="case-stack">
+    <img class="s1" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop">
+    <img class="s2" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop">
+    <img class="s3" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1200&auto=format&fit=crop">
+    <div class="case-tags"><span>Entrepreneuse</span><span>Docteur</span><span>Autrice</span></div>
+  </div>
+  <div class="case-split"><div>À créer son personal branding</div><div>De A à Z sur un sujet de niche</div></div>
+  <div class="testi"><div class="t-ava"><img src="https://i.pravatar.cc/200?img=44"></div><div class="t-name">Fanny Nusbaum</div><p class="t-quote">"Ils sont sympas, fiables, très carrés et en plus ultra créatifs."</p><a class="cta-white" data-modal-open>Prendre rendez-vous</a></div>
+</section>
+
+<!-- LOGO WALL -->
+<section class="logos" id="tarif">
+  <h2 class="sec-h">Mais, je vous rassure,<br><em>il nous reste de la place…</em></h2>
+  <div class="logo-grid">
+    <span>Goodcity</span><span>PASSIAMAN.</span><span class="b">FOLLOW<br>ME</span><span class="ava"><img src="https://i.pravatar.cc/40?img=13">Jordan Saget<br><small>+2.4M abonnés</small></span><span class="b">La Micro<br>by Flo</span><span class="box">LINAGORA</span><span class="ava"><img src="https://i.pravatar.cc/40?img=15">Podcast Monde<br><small>+4k abonnés</small></span><span class="xl">ESP</span><span>◍ FOUNDERS NIGHT</span>
+    <span>Génération Do It Yourself</span><span>[investir]</span><span>Ⓝ Notion</span><span class="ava"><img src="https://i.pravatar.cc/40?img=32">MicroByFlo<br><small>+49k abonnés</small></span><span>meilleurtaux</span><span>↗ submagic</span><span class="ava"><img src="https://i.pravatar.cc/40?img=11">Matthieu Stephani<br><small>+41k abonnés</small></span><span>Orso Media</span><span class="b">DFC</span>
+    <span>Renard</span><span class="b">NFT BUSINESS</span><span>◍ abyssale</span><span class="ava"><img src="https://i.pravatar.cc/40?img=59">Miccode<br><small>+1.4M abonnés</small></span><span>MONDE NUMERIQUE</span><span>DEEZER</span><span class="ava"><img src="https://i.pravatar.cc/40?img=53">Wakz<br><small>+132k abonnés</small></span><span>keepeek</span><span>JORDANE SAGET</span>
+    <span>LEXIPAIE</span><span class="b">Eskimoz</span><span class="ava"><img src="https://i.pravatar.cc/40?img=32">Lou Attal<br><small>+8k abonnés</small></span><span class="b">✖ STELLO</span><span>_UNDERSCORE_</span><span class="ava"><img src="https://i.pravatar.cc/40?img=60">Shubham Sharma<br><small>+180k abonnés</small></span><span>Smurfit Westrock</span><span>LA VACHE !</span><span>CAPSU⫿</span>
+    <span>B-INVEST</span><span>POWERHOUSE</span><span class="b">Papisy.</span><span class="ava"><img src="https://i.pravatar.cc/40?img=8">Better Creating<br><small>+157k abonnés</small></span><span class="you">Votre logo ?</span><span class="ava"><img src="https://i.pravatar.cc/40?img=3">Alexandre Calvez<br><small>+1.2M abonnés</small></span><span>Querimont</span><span>ē·s·d</span>
+  </div>
+  <div class="juste"><svg viewBox="0 0 100 60"><path d="M50 5 C 20 30, 80 30, 55 55 M55 55 l-6 -10 M55 55 l8 -8" fill="none" stroke="#fff" stroke-width="1.5"/></svg><p>Ah voilà, <em>juste ici.</em></p></div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="cta">
+  <div class="book-head"><h2>Prenons un moment ensemble,<br><em>pour discuter de votre prochaine vidéo.</em></h2><a class="dark-pill" href="mailto:jb@pilea.agency">Contacter par mail</a></div>
+  <div class="cal">
+    <div class="cal-l"><div class="me"><img src="https://i.pravatar.cc/40?img=13"><span>Jean-Baptiste Rogé</span><h3>Rendez-vous découverte</h3><p>◷ 15m</p><p>📅 Google Meet</p><p>🌐 Asia/Kolkata ⌄</p></div></div>
+    <div class="cal-m"><div class="cal-top"><b>September <span>2026</span></b><span>‹ &nbsp; ›</span></div><div class="dow"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div><div class="days" id="days"></div></div>
+    <div class="cal-r"><div class="slots-top"><b id="slotDay">Thu 24th</b><span><i class="on">12h</i><i>24h</i></span></div><div class="slots" id="slots"></div></div>
+  </div>
+  <div class="mini-logos"><span>NFT BUSINESS</span><span>Ⓝ Notion</span><span>FOUNDERS NIGHT</span><span>Génération Do It Yourself</span><span>Goodcity</span><span>[investir]</span><span>Orso Media</span><span>La Micro by Flo</span><span>keepeek</span></div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-l"><h2>Vous avez<br><em>une question ?</em></h2></div>
+  <div class="faq-r">
+    <h4>🖐 Oui, mais…</h4>
+    <div class="acc"><button>Pourquoi ne pas prendre un monteur de mon côté ?<span>⌄</span></button><div class="acc-b"><p>Il vous faudra attirer, recruter, tester, briefer et former en continu. Chez Pilea, on gère le montage de A à Z pour une expérience fluide.</p></div></div>
+    <div class="acc"><button>Et si je ne suis pas satisfait de ma vidéo ?<span>⌄</span></button><div class="acc-b"><p>Nous ne facturons pas les retours : autant de modifications que nécessaire jusqu'à 100% de satisfaction.</p></div></div>
+    <div class="acc"><button>Que faire si je n'ai pas le temps de m'occuper de tout ça ?<span>⌄</span></button><div class="acc-b"><p>En 2/3h par mois, on trouve les idées, on tourne chez vous et on monte tout. Miniatures, titres et programmation incluses.</p></div></div>
+    <div class="acc"><button>Est ce que mes clients sont sur les réseaux ? Vont-ils voir les vidéos ?<span>⌄</span></button><div class="acc-b"><p>85% du trafic web est vidéo. YouTube a dépassé les audiences TV en 2024. Vos clients y sont forcément.</p></div></div>
+    <div class="acc"><button>Pourquoi travailler avec Pilea Agency plutôt qu'une autre agence ?<span>⌄</span></button><div class="acc-b"><p>+8 ans de production pour Amixem, Joyca, NetflixFR, Playstation FR… Monteurs internes, chefs de projet, motion designers.</p></div></div>
+    <h4>⚙ Comment ça fonctionne ?</h4>
+    <div class="acc"><button>Comment envoyer les requêtes de vidéos ?<span>⌄</span></button><div class="acc-b"><p>Via votre hub Notion dédié qui centralise projets, ressources et suivi.</p></div></div>
+    <div class="acc"><button>Comment je fais pour vous envoyer mes fichiers ?<span>⌄</span></button><div class="acc-b"><p>Liens de téléchargement, accès espace en ligne, ou envoi postal SD/SSD.</p></div></div>
+    <div class="acc"><button>Combien de temps pour recevoir ma vidéo ?<span>⌄</span></button><div class="acc-b"><p>2/3 jours ouvrés en général. Délais express possibles (jour-même, nuit) avec frais additionnels.</p></div></div>
+    <div class="acc"><button>Comment garantissez-vous la cohérence avec notre image de marque ?<span>⌄</span></button><div class="acc-b"><p>Votre chef de projet garantit la DA et apprend de chaque retour pour ne jamais répéter deux fois la même correction.</p></div></div>
+    <h4>💡 Et, si je veux…</h4>
+    <div class="acc"><button>Je veux etre accompagné pour le tournage des vidéos.<span>⌄</span></button><div class="acc-b"><p>Tournage dès la demi-journée, ou création complète de votre studio maison rentabilisé en 10-15 tournages.</p></div></div>
+    <div class="acc"><button>Je veux la fiabilité d'une équipe mais rester libre et flexible.<span>⌄</span></button><div class="acc-b"><p>Sans engagement : partez 3 mois, vous ne payez rien. 10 vidéos cette semaine ? On s'en charge.</p></div></div>
+    <div class="acc"><button>Je veux augmenter mes ventes avec la vidéo.<span>⌄</span></button><div class="acc-b"><p>Découverte, lien, vente : le mix parfait pour booster votre business.</p></div></div>
+    <div class="acc"><button>Je veux produire des contenus de manière régulière et à grande échelle.<span>⌄</span></button><div class="acc-b"><p>+800 vidéos en 28 mois pour un streamer (1/jour TikTok), hebdo sans deadline manquée depuis 2 ans pour une youtubeuse.</p></div></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="f-in"><div class="f-brand">Pilea<br>Agency<span>2026 © Pilea, tous droits réservés.</span></div><div class="f-links"><a href="mailto:jb@pilea.agency">Contact</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">CGV</a><a href="#">Jobs</a></div><a href="#" class="f-top" id="toTop">↑</a></div></footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal"><div class="modal-card"><button class="m-x" id="mClose">✕</button><h2>Prenons un moment ensemble,<br><em>pour discuter de votre prochaine vidéo.</em></h2><div class="cal mini"><div class="cal-l"><div class="me"><span>Jean-Baptiste Rogé</span><h3>Rendez-vous découverte</h3><p>◷ 15m • Google Meet</p></div></div><div class="cal-m"><div class="cal-top"><b>September <span>2026</span></b></div><div class="days" id="days2"></div></div><div class="cal-r"><div class="slots" id="slots2"></div></div></div></div></div>
+
+<script src="script.js"></script>
 </body>
 </html>
