@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { cn } from "@/lib/cn";
 
 const GROUPS: { heading: string; items: { q: string; a: string }[] }[] = [
   {
@@ -91,7 +92,7 @@ export default function Faq() {
               const id = `${g.heading}${it.q}`;
               const isOpen = open === id;
               return (
-                <div key={id} className={isOpen ? "acc open" : "acc"}>
+                <div key={id} className={cn("acc", isOpen && "open")}>
                   <button onClick={() => setOpen(isOpen ? null : id)}>
                     {it.q}
                     <span>⌄</span>

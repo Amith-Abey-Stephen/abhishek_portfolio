@@ -31,12 +31,12 @@ app/
 components/
   Nav.tsx           # Fixed pill nav (condenses to logo on scroll)
   Hero.tsx          # Headline, video showcase, floating Frame.io cards, strips
-  Creators.tsx      # Creator marquee + "2 000 vidéos" heading
+  Creators.tsx      # Journey marquee + section heading
   Work.tsx          # Portfolio marquee rows + feature columns
   Method.tsx        # 4-step process with browser mockups
   CaseShubham.tsx / CaseFanny.tsx   # Case studies + testimonials
   Reviews.tsx       # Masonry review grid
-  LogoWall.tsx      # Client logo wall ("Votre logo ?")
+  LogoWall.tsx      # Toolkit wall ("Your project?")
   Booking.tsx / BookingCalendar.tsx # Booking widget (reused in modal)
   Faq.tsx           # Accordion FAQ
   Footer.tsx        # Footer + back-to-top
@@ -44,9 +44,23 @@ components/
 hooks/
   useSiteEffects.ts # Scroll progress, reveals, parallax, magnetic buttons,
                     # count-ups, method progress line (port of scrap script.js)
+lib/
+  cn.ts             # clsx + tailwind-merge class helper
 public/
   favicon.svg
 ```
+
+## Stack
+
+Next.js 16 · React 19 · TypeScript · **Tailwind CSS v4** (`tailwindcss` +
+`@tailwindcss/postcss`) · `clsx` + `tailwind-merge`.
+
+Tailwind is wired via `postcss.config.mjs` with design tokens in an `@theme`
+block (`bg-panel`, `text-dim`, `font-serif`, …). Its preflight reset is
+deliberately **off** so the legacy stylesheet keeps rendering pixel-identical —
+enable it with `@import "tailwindcss/preflight.css" layer(base)` once components
+migrate to utilities. Note the utilities layer sits below the unlayered legacy
+CSS, so use utilities for new styling.
 
 ## Notes
 

@@ -239,22 +239,41 @@ export function useSiteEffects() {
     const steps = [...document.querySelectorAll(".step")];
     let sio: IntersectionObserver | null = null;
     if (method) {
+      const mEl = method as HTMLElement;
       const bar = document.createElement("div");
       bar.id = "stepProgress";
-      method.appendChild(bar);
+      mEl.appendChild(bar);
       cleanups.push(() => bar.remove());
+      // Measure the real badge centers so the line runs through the
+      // middle of every Jour badge on any viewport (no magic numbers).
+      const measure = () => {
+        const first = steps[0]?.querySelector(".jour");
+        const last = steps[steps.length - 1]?.querySelector(".jour");
+        if (!first || !last) return null;
+        const mRect = mEl.getBoundingClientRect();
+        const f = first.getBoundingClientRect();
+        const l = last.getBoundingClientRect();
+        const x = f.left + f.width / 2 - mRect.left;
+        const top = f.top + f.height / 2 - mRect.top;
+        const h = Math.max(l.top + l.height / 2 - mRect.top - top, 0);
+        mEl.style.setProperty("--tl-x", `${x.toFixed(1)}px`);
+        mEl.style.setProperty("--tl-top", `${top.toFixed(1)}px`);
+        mEl.style.setProperty("--tl-h", `${h.toFixed(1)}px`);
+        return { top, h };
+      };
       const line = () => {
-        const mr = (method as HTMLElement).getBoundingClientRect();
-        const top = 220,
-          bottom = mr.height - 120;
-        const p = Math.min(
-          Math.max((window.innerHeight * 0.55 - mr.top) / mr.height, 0),
-          1
-        );
-        bar.style.top = top + "px";
-        bar.style.height = (bottom - top) * p + "px";
+        const geo = measure();
+        if (!geo || geo.h <= 0) return;
+        const mr = mEl.getBoundingClientRect();
+        // fill completes exactly as the viewport anchor travels the line
+        const anchor = window.innerHeight * 0.55 - mr.top;
+        const p = Math.min(Math.max((anchor - geo.top) / geo.h, 0), 1);
+        bar.style.height = `${geo.h * p}px`;
       };
       on(window, "scroll", line, { passive: true });
+      on(window, "resize", line);
+      on(window, "load", line);
+      if (document.fonts?.ready) document.fonts.ready.then(line);
       line();
       sio = new IntersectionObserver(
         (es) =>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { cn } from "@/lib/cn";
 
 const HIGHLIGHTED = new Set([21, 22, 23, 24, 25, 5, 6, 7, 8, 9]);
 const TIMES = [
@@ -20,13 +21,11 @@ function septDays(selDay: number, onPick: (d: number) => void) {
   const out: React.ReactNode[] = [];
   out.push(<span key="blank" />);
   for (let d = 1; d <= 30; d++) {
-    const cls = [
-      d < 8 ? "dim" : "",
-      HIGHLIGHTED.has(d) ? "hl" : "",
-      d === selDay ? "sel" : "",
-    ]
-      .filter(Boolean)
-      .join(" ");
+    const cls = cn(
+      d < 8 && "dim",
+      HIGHLIGHTED.has(d) && "hl",
+      d === selDay && "sel"
+    );
     out.push(
       <button key={`s${d}`} className={cls} onClick={() => onPick(d)}>
         {d === 18 ? (
@@ -42,9 +41,7 @@ function septDays(selDay: number, onPick: (d: number) => void) {
   }
   for (let d = 1; d <= 11; d++) {
     const hl = d <= 9 && HIGHLIGHTED.has(d);
-    const cls = [hl ? "hl" : "dim", d === selDay ? "sel" : ""]
-      .filter(Boolean)
-      .join(" ");
+    const cls = cn(hl ? "hl" : "dim", d === selDay && "sel");
     // original quirk: 5–9 of next month render undimmed
     const fixed = [5, 6, 7, 8, 9].includes(d) ? cls.replace("dim", "").trim() : cls;
     out.push(
@@ -112,7 +109,7 @@ export default function BookingCalendar({ mini = false }: { mini?: boolean }) {
           {TIMES.map((t) => (
             <button
               key={t}
-              className={t === selTime ? "sel" : ""}
+              className={cn(t === selTime && "sel")}
               onClick={() => setSelTime(t)}
             >
               {t}
