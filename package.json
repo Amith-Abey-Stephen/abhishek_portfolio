@@ -1,0 +1,22 @@
+{
+  "name": "pilea-next",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pilea Agency clone for a video editor — Next.js App Router port of the scrap folder UI, pixel-faithful.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
