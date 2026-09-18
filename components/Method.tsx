@@ -10,7 +10,7 @@ function Cta({ onOpenModal }: { onOpenModal: () => void }) {
         onOpenModal();
       }}
     >
-      Prendre rendez-vous
+      Book a call
     </a>
   );
 }
@@ -37,20 +37,20 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
   return (
     <section className="method" id="methode">
       <h2 className="sec-h left">
-        Grâce à une méthode
+        A career in four stages
         <br />
-        <em>en 4 étapes…</em>
+        <em>from analysis to ownership.</em>
       </h2>
 
       <div className="step">
         <div className="step-l">
           <div className="jour">
-            Jour<small>1</small>
+            Step<small>1</small>
           </div>
-          <h3>On se rencontre</h3>
+          <h3>Content analysis</h3>
           <p>
-            Un appel en visioconférence pour comprendre votre projet et préparer
-            votre prochaine vidéo.
+            Started at Meta Algorithm Solutions learning audience behaviour,
+            content quality — and why certain content works.
           </p>
           <Cta onOpenModal={onOpenModal} />
         </div>
@@ -67,8 +67,8 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
               <span>▶|</span>
             </div>
             <div className="meet-names">
-              <span>Jean-Baptiste Rogé</span>
-              <span>Pierre - AcmeLabs</span>
+              <span>Abhishek.D</span>
+              <span>Founder — KPH Podcast</span>
             </div>
           </div>
         </div>
@@ -77,63 +77,66 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
       <div className="step">
         <div className="step-l">
           <div className="jour">
-            Jour<small>2</small>
+            Step<small>2</small>
           </div>
-          <h3>Le projet démarre</h3>
-          <p>Suivez l&apos;avancement du projet sur votre portail client.</p>
+          <h3>Creative production</h3>
+          <p>
+            Moved into video editing and visual storytelling — documentary-style
+            work, from concept through final delivery.
+          </p>
           <Cta onOpenModal={onOpenModal} />
         </div>
         <div className="browser">
           <Bar active={1} />
           <div className="b-body notion">
-            <div className="n-title">🌐 HUB - AcmeLabs x Pilea</div>
+            <div className="n-title">🌐 HUB - KPH Podcast x Abhishek.D</div>
             <div className="n-table">
               <div className="n-th">
                 <span>STATUS</span>
-                <span>PROJET</span>
-                <span>FICHIERS BRUTS</span>
-                <span>LIVRABLES</span>
-                <span>TÂCHES</span>
+                <span>PROJECT</span>
+                <span>RAW FILES</span>
+                <span>DELIVERABLES</span>
+                <span>TASKS</span>
               </div>
               <div className="n-tr">
                 <span className="st blue">In Progress</span>
-                <span>202308YTB_GptVision</span>
+                <span>KPH_Pod_Ep42_FullEdit</span>
                 <span></span>
                 <span>https://f.io/4m..</span>
-                <span>☐ Faire les retours sur Frame</span>
+                <span>☐ Structure the full episode</span>
               </div>
               <div className="n-tr">
                 <span className="st orange">Potential</span>
-                <span>20241ADS_StoriesInsta</span>
+                <span>KPH_Shorts_Batch12</span>
                 <span></span>
                 <span>https://f.io/4m..</span>
-                <span>☐ Écrire des concepts d&apos;ads</span>
+                <span>☐ Pick 6 short-form moments</span>
               </div>
               <div className="n-tr">
                 <span className="st green">Success</span>
-                <span>20230930VSL_OldHomepage</span>
+                <span>KPH_Ep41_YouTube</span>
                 <span></span>
                 <span>https://f.io/4m..</span>
-                <span>☐ Monter la VSL ☐ Compresser la VSL</span>
+                <span>☐ Final cut ☐ Upload to YouTube</span>
               </div>
             </div>
             <div className="n-kanban">
               <div className="kcol">
-                <b>● Idée 6</b>
-                <i>Comment produire plus de vidéos en moins de temps</i>
-                <i>Que faire quand on a perdu les fichiers d&apos;une carte sd ?</i>
+                <b>● Ideas 6</b>
+                <i>One conversation → five outputs</i>
+                <i>Hook options for the next Short</i>
               </div>
               <div className="kcol">
-                <b>● À tourner 2</b>
-                <i>Comment incarner sa marque sans se bloquer…</i>
+                <b>● To record 2</b>
+                <i>Founder story: distribution…</i>
               </div>
               <div className="kcol">
-                <b>● À produire 3</b>
-                <i>Je veux garder mon indépendance de créateur…</i>
+                <b>● To edit 3</b>
+                <i>Ep. 42 full cut…</i>
               </div>
               <div className="kcol">
-                <b>● En production 1</b>
-                <i>Si j&apos;avais un studio dans mes bureaux…</i>
+                <b>● Publishing 1</b>
+                <i>Ep. 41 on YouTube…</i>
               </div>
             </div>
           </div>
@@ -143,12 +146,12 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
       <div className="step">
         <div className="step-l">
           <div className="jour">
-            Jour<small>4</small>
+            Step<small>3</small>
           </div>
-          <h3>La vidéo avance</h3>
+          <h3>Leadership</h3>
           <p>
-            Si besoin, vous pourrez faire vos retours sur la vidéo en 1 minute
-            grâce à une interface intuitive.
+            Video Editing Team Lead: coordinating workflows, quality and
+            delivery — ownership that goes beyond the timeline.
           </p>
           <Cta onOpenModal={onOpenModal} />
         </div>
@@ -156,7 +159,7 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
           <Bar active={2} />
           <div className="b-body frame">
             <div className="f-file">
-              ‹ YTB_ACME-AirFryer.mp4 <span>Approved Share</span>
+              ‹ KPH_Pod_Ep42_Full.mp4 <span>Approved Share</span>
             </div>
             <img
               src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=1200&auto=format&fit=crop"
@@ -164,12 +167,12 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
             />
             <div className="f-comments">
               <div>
-                <b>Pierre - Acme Labs 02:06</b>
-                <p>Possible d&apos;ajouter des sous-titres ?</p>
+                <b>Abhishek 02:06</b>
+                <p>Possible to tighten this pause?</p>
               </div>
               <div>
-                <b>Pierre - Acme Labs 04:21</b>
-                <p>C&apos;est parfait ! J&apos;adore l&apos;idée</p>
+                <b>Abhishek 04:21</b>
+                <p>This story is the hook — keep it</p>
               </div>
             </div>
           </div>
@@ -179,12 +182,12 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
       <div className="step">
         <div className="step-l">
           <div className="jour">
-            Jour<small>10</small>
+            Step<small>4</small>
           </div>
-          <h3>La vidéo est prête</h3>
+          <h3>Content ownership</h3>
           <p>
-            Récupérez votre vidéo en haute qualité et au bon format et préparez
-            vous à la diffuser.
+            Today at Kerala Product Hunt: the full pipeline — long-form edits,
+            repurposing, YouTube publishing and distribution.
           </p>
           <Cta onOpenModal={onOpenModal} />
         </div>
@@ -192,7 +195,7 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
           <Bar active={3} />
           <div className="b-body yt">
             <div className="yt-head">
-              ▶ YouTube <span>Rechercher 🔍</span>
+              ▶ YouTube <span>Search 🔍</span>
             </div>
             <img
               src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=1200&auto=format&fit=crop"
@@ -202,10 +205,10 @@ export default function Method({ onOpenModal }: { onOpenModal: () => void }) {
               <i />
             </div>
             <div className="yt-title">
-              Le air fryer le plus cher est-il vraiment le plus efficace ?
+              How founders turn one conversation into content that travels
               <br />
               <small>
-                AcmeLabs 1.23M subscribers • 244K views - 6 months ago • 6.7K 👍
+                KPH Podcast • New episode • Edited by Abhishek.D
               </small>
             </div>
           </div>

@@ -1,28 +1,28 @@
 "use client";
 
 const LOGOS = [
-  { cls: "ls-script", text: "Blooming YOU" },
-  { cls: "ls-bold", text: "Papisy" },
-  { cls: "ls-logo", text: "✣ STELLO" },
-  { cls: "ls-logo", text: "▦ Querimont" },
-  { cls: "ls-logo", text: "_UNDERSCORE_" },
-  { cls: "ls-logo", text: "◍ PASSIAMAN" },
-  { cls: "ls-logo", text: "LINAGORA" },
+  { cls: "ls-script", text: "CapCut" },
+  { cls: "ls-bold", text: "Premiere Pro" },
+  { cls: "ls-logo", text: "✣ AFTER EFFECTS" },
+  { cls: "ls-logo", text: "▦ Canva" },
+  { cls: "ls-logo", text: "_CHATGPT_" },
+  { cls: "ls-logo", text: "◍ YOUTUBE" },
+  { cls: "ls-logo", text: "INSTAGRAM" },
 ];
 
 const FACES = [
-  { img: "https://i.pravatar.cc/40?img=59", name: "Miccode", subs: "+1.4M abonnés" },
-  { img: "https://i.pravatar.cc/40?img=15", name: "Matthias Frank", subs: "+14k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=53", name: "Wakz", subs: "+132k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=8", name: "Better Creating", subs: "+157k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=11", name: "Matthieu Stephani", subs: "+41k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=3", name: "Alexandre Calvez", subs: "+1.2M abonnés" },
+  { img: "https://i.pravatar.cc/40?img=59", name: "Podcast Editing", subs: "Long-form focus" },
+  { img: "https://i.pravatar.cc/40?img=15", name: "Video Editing", subs: "3+ years of craft" },
+  { img: "https://i.pravatar.cc/40?img=53", name: "Team Lead", subs: "Creative ownership" },
+  { img: "https://i.pravatar.cc/40?img=8", name: "Content Analyst", subs: "Where it started" },
+  { img: "https://i.pravatar.cc/40?img=11", name: "Motion Design", subs: "Now learning" },
+  { img: "https://i.pravatar.cc/40?img=3", name: "AI Workflows", subs: "Faster systems" },
 ];
 
 const COMMENTS = [
-  { time: "03:12", text: "J'aime beaucoup cette transition !" },
-  { time: "06:54", text: "Possible d'ajouter des émojis sur les sous-titres ?" },
-  { time: "02:06", text: <>La première partie est parfaite !<br />C&apos;est validé</> },
+  { time: "03:12", text: "Love this transition!" },
+  { time: "06:54", text: "Can we add captions to the subtitles here?" },
+  { time: "02:06", text: <>The first half is perfect.<br />Approved</> },
 ];
 
 export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
@@ -37,16 +37,17 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
         <i className="gr" />
       </div>
       <h1 className="hero-h1" data-plx="0.25">
-        On crée vos
+        I find the story
         <br />
-        <em>contenus vidéo.</em>
+        <em>inside raw material.</em>
       </h1>
       <p className="hero-sub" data-plx="0.3">
-        Tout inclus, prix fixes &amp; retours illimités.
+        Video Editor · Podcast Editor · Content Creator — 3+ years of long-form
+        &amp; short-form.
       </p>
       <div className="hero-cta" data-plx="0.32">
         <a href="#cta" className="cta-white" onClick={open}>
-          Prendre rendez-vous
+          Book a call
         </a>
       </div>
 
@@ -60,7 +61,7 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
               <div className="fc-row">
                 <div className="fc-id">
                   <span className="fc-globe">🌐</span>
-                  <span className="fc-name">Acme Labs</span>
+                  <span className="fc-name">KPH Podcast</span>
                 </div>
                 <div className="fc-time">{c.time}</div>
                 <div className="fc-txt">{c.text}</div>
@@ -75,20 +76,20 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
         <div className="hero-video" onClick={open}>
           <img
             src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1800&auto=format&fit=crop"
-            alt="Studio Pilea — Jean-Baptiste face caméra"
+            alt="Podcast studio — edit in progress"
           />
           <div className="hv-shade" />
           <div className="hv-cap left">
-            <b>Montage</b>
-            <em>vidéo</em>
+            <b>Long-form</b>
+            <em>episodes</em>
           </div>
           <div className="hv-cap right">
-            <b>Création</b>
+            <b>Short-form</b>
             <em>
-              <small>de</small> contenu
+              <small>&</small> clips
             </em>
           </div>
-          <button className="hv-play" aria-label="Lire la vidéo">
+          <button className="hv-play" aria-label="Play the video">
             <svg viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
@@ -97,7 +98,7 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
         {/* right top: Informations */}
         <div className="float-card fc-info" data-plx="0.12">
           <div className="fc-head">
-            <span className="fc-i">ⓘ</span> Informations
+            <span className="fc-i">ⓘ</span> Information
           </div>
           <div className="fc-badges">
             <span>◷ 1:10</span>
@@ -108,16 +109,16 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
         </div>
         {/* right bottom: file card */}
         <div className="float-card fc-file" data-plx="-0.1">
-          <div className="ff-name">AcmeLabs_023_VDEF.mp4</div>
+          <div className="ff-name">KPH_Podcast_VFINAL.mp4</div>
           <div className="ff-author">
-            Jean-Baptiste Rogé&nbsp;&nbsp;•&nbsp;&nbsp;18 sept. 2026
+            Abhishek.D&nbsp;&nbsp;•&nbsp;&nbsp;Podcast edit
           </div>
           <div className="ff-sec">
-            <span className="ff-label">⚑ État de la vidéo</span>
-            <span className="ff-pill">Prêt à être publié</span>
+            <span className="ff-label">⚑ Video status</span>
+            <span className="ff-pill">Ready to publish</span>
           </div>
           <div className="ff-sec">
-            <span className="ff-label">🖥 Plateforme de publication</span>
+            <span className="ff-label">🖥 Publishing platforms</span>
             <div className="fc-plats">
               <i>◉ LinkedIn</i>
               <i>▶ Youtube</i>
@@ -127,7 +128,7 @@ export default function Hero({ onOpenModal }: { onOpenModal: () => void }) {
             </div>
           </div>
           <div className="ff-foot">
-            <span>Édition finale</span>
+            <span>Final cut</span>
             <b className="check">✓</b>
           </div>
         </div>

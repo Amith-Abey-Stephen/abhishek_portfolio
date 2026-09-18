@@ -6,58 +6,58 @@ type Cell =
 
 const ROWS: Cell[][] = [
   [
-    { kind: "text", text: "Goodcity" },
-    { kind: "text", text: "PASSIAMAN." },
-    { kind: "text", text: "FOLLOW ME", cls: "b" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=13", name: "Jordan Saget", subs: "+2.4M abonnés" },
-    { kind: "text", text: "La Micro by Flo", cls: "b" },
-    { kind: "text", text: "LINAGORA", cls: "box" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=15", name: "Podcast Monde", subs: "+4k abonnés" },
-    { kind: "text", text: "ESP", cls: "xl" },
-    { kind: "text", text: "◍ FOUNDERS NIGHT" },
+    { kind: "text", text: "Premiere Pro", cls: "b" },
+    { kind: "text", text: "After Effects" },
+    { kind: "text", text: "CapCut", cls: "b" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=13", name: "Content Analyst", subs: "Foundations" },
+    { kind: "text", text: "Canva", cls: "b" },
+    { kind: "text", text: "ChatGPT", cls: "box" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=15", name: "Video Editor", subs: "The craft" },
+    { kind: "text", text: "PODCAST", cls: "xl" },
+    { kind: "text", text: "◍ YOUTUBE" },
   ],
   [
-    { kind: "text", text: "Génération Do It Yourself" },
-    { kind: "text", text: "[investir]" },
+    { kind: "text", text: "Motion Design" },
+    { kind: "text", text: "[Reels]" },
     { kind: "text", text: "Ⓝ Notion" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=32", name: "MicroByFlo", subs: "+49k abonnés" },
-    { kind: "text", text: "meilleurtaux" },
-    { kind: "text", text: "↗ submagic" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=11", name: "Matthieu Stephani", subs: "+41k abonnés" },
-    { kind: "text", text: "Orso Media" },
-    { kind: "text", text: "DFC", cls: "b" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=32", name: "Team Lead", subs: "Ownership" },
+    { kind: "text", text: "Shorts" },
+    { kind: "text", text: "↗ AI tools" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=11", name: "Podcast Editor", subs: "KPH" },
+    { kind: "text", text: "Storytelling" },
+    { kind: "text", text: "CLIPS", cls: "b" },
   ],
   [
-    { kind: "text", text: "Renard" },
-    { kind: "text", text: "NFT BUSINESS", cls: "b" },
-    { kind: "text", text: "◍ abyssale" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=59", name: "Miccode", subs: "+1.4M abonnés" },
-    { kind: "text", text: "MONDE NUMERIQUE" },
-    { kind: "text", text: "DEEZER" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=53", name: "Wakz", subs: "+132k abonnés" },
-    { kind: "text", text: "keepeek" },
-    { kind: "text", text: "JORDANE SAGET" },
+    { kind: "text", text: "Raw footage" },
+    { kind: "text", text: "LONG-FORM", cls: "b" },
+    { kind: "text", text: "◍ Hooks" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=59", name: "Kerala Product Hunt", subs: "Current home" },
+    { kind: "text", text: "DISTRIBUTION" },
+    { kind: "text", text: "REELS" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=53", name: "Meta Algorithm", subs: "Where it started" },
+    { kind: "text", text: "Publishing" },
+    { kind: "text", text: "OLOPO APP" },
   ],
   [
-    { kind: "text", text: "LEXIPAIE" },
-    { kind: "text", text: "Eskimoz", cls: "b" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=32", name: "Lou Attal", subs: "+8k abonnés" },
-    { kind: "text", text: "✖ STELLO", cls: "b" },
-    { kind: "text", text: "_UNDERSCORE_" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=60", name: "Shubham Sharma", subs: "+180k abonnés" },
-    { kind: "text", text: "Smurfit Westrock" },
-    { kind: "text", text: "LA VACHE !" },
-    { kind: "text", text: "CAPSU⫿" },
+    { kind: "text", text: "PACING" },
+    { kind: "text", text: "Subtitles", cls: "b" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=32", name: "Motion", subs: "Learning" },
+    { kind: "text", text: "✖ CUTS", cls: "b" },
+    { kind: "text", text: "_TIMELINE_" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=60", name: "AI Workflows", subs: "Systems" },
+    { kind: "text", text: "YouTube" },
+    { kind: "text", text: "SHORTS" },
+    { kind: "text", text: "HOOKS" },
   ],
   [
-    { kind: "text", text: "B-INVEST" },
-    { kind: "text", text: "POWERHOUSE" },
-    { kind: "text", text: "Papisy.", cls: "b" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=8", name: "Better Creating", subs: "+157k abonnés" },
-    { kind: "text", text: "Votre logo ?", cls: "you" },
-    { kind: "ava", img: "https://i.pravatar.cc/40?img=3", name: "Alexandre Calvez", subs: "+1.2M abonnés" },
-    { kind: "text", text: "Querimont" },
-    { kind: "text", text: "ē·s·d" },
+    { kind: "text", text: "AUTHENTICITY" },
+    { kind: "text", text: "STORY" },
+    { kind: "text", text: "Reels.", cls: "b" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=8", name: "Olopo App", subs: "Creative growth" },
+    { kind: "text", text: "Your project?", cls: "you" },
+    { kind: "ava", img: "https://i.pravatar.cc/40?img=3", name: "KPH Podcast", subs: "Weekly episodes" },
+    { kind: "text", text: "Distribution" },
+    { kind: "text", text: "ē·d·i·t" },
   ],
 ];
 
@@ -65,9 +65,9 @@ export default function LogoWall() {
   return (
     <section className="logos" id="tarif">
       <h2 className="sec-h">
-        Mais, je vous rassure,
+        The short version:
         <br />
-        <em>il nous reste de la place…</em>
+        <em>the tools I reach for.</em>
       </h2>
       <div className="logo-grid">
         {ROWS.flat().map((c, i) =>
@@ -100,7 +100,7 @@ export default function LogoWall() {
           />
         </svg>
         <p>
-          Ah voilà, <em>juste ici.</em>
+          Ah, <em>right here.</em>
         </p>
       </div>
     </section>

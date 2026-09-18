@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pilea — Agence de montage vidéo",
+  title: "Abhishek.D — Video Editor & Podcast Editor",
   description:
-    "Montage vidéo pour entrepreneurs, créateurs & entreprises. Tout inclus & retours illimités.",
+    "Video Editor and Podcast Editor with 3+ years of experience across long-form, short-form repurposing and AI-assisted workflows.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

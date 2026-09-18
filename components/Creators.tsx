@@ -1,17 +1,17 @@
 "use client";
 
 const CREATORS = [
-  { img: "https://i.pravatar.cc/40?img=12", name: "Podcast Monde Numérique", subs: "+4k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=5", name: "Follow me", subs: "+1.7k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=13", name: "Jordane Saget", subs: "+2.4M abonnés" },
-  { img: "https://i.pravatar.cc/40?img=32", name: "MicroByFlo", subs: "+49k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=59", name: "Miccode", subs: "+1.4M abonnés" },
-  { img: "https://i.pravatar.cc/40?img=15", name: "Matthias Frank", subs: "+14k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=53", name: "Wakz", subs: "+132k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=8", name: "Better Creating", subs: "+157k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=11", name: "Matthieu Stephani", subs: "+41k abonnés" },
-  { img: "https://i.pravatar.cc/40?img=3", name: "Alexandre Calvez", subs: "+1.2M abonnés" },
-  { img: "https://i.pravatar.cc/40?img=60", name: "Shubham Sharma", subs: "+180k abonnés" },
+  { img: "https://i.pravatar.cc/40?img=12", name: "Content Analyst", subs: "Where it started" },
+  { img: "https://i.pravatar.cc/40?img=5", name: "Video Editor", subs: "3+ years of craft" },
+  { img: "https://i.pravatar.cc/40?img=13", name: "Team Lead", subs: "Creative ownership" },
+  { img: "https://i.pravatar.cc/40?img=32", name: "Podcast Editor", subs: "Current specialisation" },
+  { img: "https://i.pravatar.cc/40?img=59", name: "Short-form", subs: "Reels & Shorts" },
+  { img: "https://i.pravatar.cc/40?img=15", name: "Storytelling", subs: "Raw to narrative" },
+  { img: "https://i.pravatar.cc/40?img=53", name: "AI Workflows", subs: "Faster systems" },
+  { img: "https://i.pravatar.cc/40?img=8", name: "Motion Design", subs: "Now learning" },
+  { img: "https://i.pravatar.cc/40?img=11", name: "YouTube", subs: "Publishing & delivery" },
+  { img: "https://i.pravatar.cc/40?img=3", name: "Marketing", subs: "Audience awareness" },
+  { img: "https://i.pravatar.cc/40?img=60", name: "Distribution", subs: "Engineering luck" },
 ];
 
 export default function Creators({ onOpenModal }: { onOpenModal: () => void }) {
@@ -30,9 +30,9 @@ export default function Creators({ onOpenModal }: { onOpenModal: () => void }) {
         </div>
       </div>
       <h2 className="sec-h">
-        Nous avons réalisé
+        Three years in,
         <br />
-        <em>+ de 2 000 vidéos pour + de 250 clients.</em>
+        <em>four stages of one craft.</em>
       </h2>
       <div className="cta-center">
         <a
@@ -43,7 +43,7 @@ export default function Creators({ onOpenModal }: { onOpenModal: () => void }) {
             onOpenModal();
           }}
         >
-          Prendre rendez-vous
+          Book a call
         </a>
       </div>
     </section>

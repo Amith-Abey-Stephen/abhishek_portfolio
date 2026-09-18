@@ -13,12 +13,12 @@ export default function CaseFanny({
     <section className="case">
       <div className="case-top">
         <h2 className="sec-h left">
-          Ou encore d&apos;aider
+          And the direction:
           <br />
-          <em>Fanny Nusbaum.</em>
+          <em>toward creative ownership.</em>
         </h2>
         <a className="dark-pill" href="#cta" onClick={open}>
-          Voir les vidéos
+          Work with me
         </a>
       </div>
       <div className="case-stack">
@@ -38,26 +38,28 @@ export default function CaseFanny({
           alt=""
         />
         <div className="case-tags">
-          <span>Entrepreneuse</span>
-          <span>Docteur</span>
-          <span>Autrice</span>
+          <span>Team Lead</span>
+          <span>Systems</span>
+          <span>Distribution</span>
         </div>
       </div>
       <div className="case-split">
-        <div>À créer son personal branding</div>
-        <div>De A à Z sur un sujet de niche</div>
+        <div>From executing edits</div>
+        <div>To owning the outcome</div>
       </div>
       <div className="testi">
         <div className="t-ava">
           <img src="https://i.pravatar.cc/200?img=44" alt="" />
         </div>
-        <div className="t-name">Fanny Nusbaum</div>
+        <div className="t-name">Career statement</div>
         <p className="t-quote">
-          &quot;Ils sont sympas, fiables, très carrés et en plus ultra
-          créatifs.&quot;
+          &quot;I started by learning how content works. Then I learned how to
+          make it. Then I learned how to lead the people and process behind
+          it. Now I am learning how to build systems that help content travel
+          further.&quot;
         </p>
         <a href="#cta" className="cta-white" onClick={open}>
-          Prendre rendez-vous
+          Book a call
         </a>
       </div>
     </section>

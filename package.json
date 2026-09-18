@@ -1,8 +1,8 @@
 {
-  "name": "pilea-next",
+  "name": "abhishek-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Pilea Agency clone for a video editor — Next.js App Router port of the scrap folder UI, pixel-faithful.",
+  "description": "Abhishek.D — Video Editor & Podcast Editor portfolio (Next.js App Router).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

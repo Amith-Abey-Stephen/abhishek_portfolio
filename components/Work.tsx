@@ -3,20 +3,20 @@ const ROW2 = ["pilea6", "pilea7", "pilea8", "pilea9", "pilea10"];
 
 const FEATS = [
   {
-    title: "⚡ Sans engagement",
-    text: "Arrêtez-vous quand vous le voulez. Et bénéficiez d'une force de frappe activable à votre disposition.",
+    title: "🎙 Podcast editing",
+    text: "Full-length episodes shaped for pacing and structure, without losing the authenticity of the conversation.",
   },
   {
-    title: "⁘ Matching de monteurs",
-    text: "Nous attribuerons nos talents en fonction des codes de votre secteur d'activité ou du sujet abordé.",
+    title: "✂ Short-form repurposing",
+    text: "Strong moments identified and transformed into Reels, Shorts and clips — one source, every platform.",
   },
   {
-    title: "💬 Interlocuteur dédié",
-    text: "Un chef de projet vous sera attribué pour faciliter les échanges avec un hub en ligne et une ligne directe.",
+    title: "📖 Storytelling",
+    text: "Finding the narrative inside raw material: hooks, clarity and structure that hold attention.",
   },
   {
-    title: "♛ Monteurs vidéo qualifiés",
-    text: "Chaque monteur/euse est testé et encadré par vous garantir une qualité de production au top sur chaque vidéo.",
+    title: "🤖 AI-assisted workflows",
+    text: "AI as leverage for ideas, research and efficiency — with creative judgement staying human-led.",
   },
 ];
 

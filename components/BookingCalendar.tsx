@@ -65,8 +65,8 @@ export default function BookingCalendar({ mini = false }: { mini?: boolean }) {
       <div className="cal-l">
         <div className="me">
           {!mini && <img src="https://i.pravatar.cc/40?img=13" alt="" />}
-          <span>Jean-Baptiste Rogé</span>
-          <h3>Rendez-vous découverte</h3>
+          <span>Abhishek.D</span>
+          <h3>Discovery call</h3>
           {mini ? (
             <p>◷ 15m • Google Meet</p>
           ) : (

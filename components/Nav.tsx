@@ -5,12 +5,12 @@ export default function Nav({ onOpenModal }: { onOpenModal: () => void }) {
     <header className="nav-wrap">
       <nav className="nav-pill">
         <div className="nav-left">
-          <a href="#methode">Méthode</a>
-          <a href="#tarif">Tarif</a>
+          <a href="#methode">Journey</a>
+          <a href="#tarif">Toolkit</a>
           <a href="#faq">FAQ</a>
         </div>
         <a href="#" className="nav-logo">
-          Pilea Agency
+          Abhishek.D
         </a>
         <a
           href="#cta"
@@ -20,7 +20,7 @@ export default function Nav({ onOpenModal }: { onOpenModal: () => void }) {
             onOpenModal();
           }}
         >
-          Prendre rendez-vous
+          Book a call
         </a>
       </nav>
     </header>

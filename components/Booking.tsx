@@ -1,15 +1,15 @@
 import BookingCalendar from "./BookingCalendar";
 
 const MINI = [
-  "NFT BUSINESS",
+  "Premiere Pro",
   "Ⓝ Notion",
-  "FOUNDERS NIGHT",
-  "Génération Do It Yourself",
-  "Goodcity",
-  "[investir]",
-  "Orso Media",
-  "La Micro by Flo",
-  "keepeek",
+  "After Effects",
+  "Podcast Editing",
+  "CapCut",
+  "Short-form",
+  "Canva",
+  "YouTube",
+  "AI Workflows",
 ];
 
 export default function Booking() {
@@ -17,12 +17,12 @@ export default function Booking() {
     <section className="booking" id="cta">
       <div className="book-head">
         <h2>
-          Prenons un moment ensemble,
+          Let&apos;s take a moment,
           <br />
-          <em>pour discuter de votre prochaine vidéo.</em>
+          <em>to talk about your next video.</em>
         </h2>
-        <a className="dark-pill" href="mailto:jb@pilea.agency">
-          Contacter par mail
+        <a className="dark-pill" href="#faq">
+          Questions?
         </a>
       </div>
       <BookingCalendar />

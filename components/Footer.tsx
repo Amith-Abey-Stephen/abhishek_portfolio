@@ -5,16 +5,16 @@ export default function Footer() {
     <footer>
       <div className="f-in">
         <div className="f-brand">
-          Pilea
+          Abhishek
           <br />
-          Agency<span>2026 © Pilea, tous droits réservés.</span>
+          .D<span>2026 © Abhishek.D, all rights reserved.</span>
         </div>
         <div className="f-links">
-          <a href="mailto:jb@pilea.agency">Contact</a>
-          <a href="#">Mentions légales</a>
-          <a href="#">Confidentialité</a>
-          <a href="#">CGV</a>
-          <a href="#">Jobs</a>
+          <a href="#cta">Contact</a>
+          <a href="#methode">Journey</a>
+          <a href="#tarif">Toolkit</a>
+          <a href="#faq">FAQ</a>
+          <a href="#hero">Top</a>
         </div>
         <a
           href="#"

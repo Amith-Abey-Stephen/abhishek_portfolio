@@ -4,69 +4,69 @@ import { useState } from "react";
 
 const GROUPS: { heading: string; items: { q: string; a: string }[] }[] = [
   {
-    heading: "🖐 Oui, mais…",
+    heading: "🖐 Start here…",
     items: [
       {
-        q: "Pourquoi ne pas prendre un monteur de mon côté ?",
-        a: "Il vous faudra attirer, recruter, tester, briefer et former en continu. Chez Pilea, on gère le montage de A à Z pour une expérience fluide.",
+        q: "Who is Abhishek?",
+        a: "A Video Editor and Podcast Editor with 3+ years of experience across content analysis, video production, creative leadership, podcast editing, short-form repurposing and AI-assisted workflows.",
       },
       {
-        q: "Et si je ne suis pas satisfait de ma vidéo ?",
-        a: "Nous ne facturons pas les retours : autant de modifications que nécessaire jusqu'à 100% de satisfaction.",
+        q: "What is the current focus?",
+        a: "Long-form podcast production at Kerala Product Hunt — full episode edits, short-form repurposing into Reels and Shorts, and YouTube publishing and delivery.",
       },
       {
-        q: "Que faire si je n'ai pas le temps de m'occuper de tout ça ?",
-        a: "En 2/3h par mois, on trouve les idées, on tourne chez vous et on monte tout. Miniatures, titres et programmation incluses.",
+        q: "How did this career start?",
+        a: "As a Content Analyst, learning audience behaviour and why certain content works — a foundation that still shapes every editing decision.",
       },
       {
-        q: "Est ce que mes clients sont sur les réseaux ? Vont-ils voir les vidéos ?",
-        a: "85% du trafic web est vidéo. YouTube a dépassé les audiences TV en 2024. Vos clients y sont forcément.",
+        q: "What about leadership experience?",
+        a: "Video Editing Team Lead: coordinating people, workflows, quality and delivery — learning to own the outcome, not just the timeline.",
       },
       {
-        q: "Pourquoi travailler avec Pilea Agency plutôt qu'une autre agence ?",
-        a: "+8 ans de production pour Amixem, Joyca, NetflixFR, Playstation FR… Monteurs internes, chefs de projet, motion designers.",
+        q: "Why podcasts?",
+        a: "A podcast holds stories, opinions, pauses and unexpected moments. The editor gives it structure without destroying the authenticity that makes it valuable.",
       },
     ],
   },
   {
-    heading: "⚙ Comment ça fonctionne ?",
+    heading: "⚙ How does the work happen?",
     items: [
       {
-        q: "Comment envoyer les requêtes de vidéos ?",
-        a: "Via votre hub Notion dédié qui centralise projets, ressources et suivi.",
+        q: "What does the editing workflow look like?",
+        a: "Raw recording in, structured story out: full-episode pacing and structure first, then the strongest moments repurposed into platform-ready short-form.",
       },
       {
-        q: "Comment je fais pour vous envoyer mes fichiers ?",
-        a: "Liens de téléchargement, accès espace en ligne, ou envoi postal SD/SSD.",
+        q: "How is one episode turned into many outputs?",
+        a: "Think in systems: one conversation becomes a YouTube episode, multiple short clips, promotional assets and future content ideas.",
       },
       {
-        q: "Combien de temps pour recevoir ma vidéo ?",
-        a: "2/3 jours ouvrés en général. Délais express possibles (jour-même, nuit) avec frais additionnels.",
+        q: "What tools are in the toolkit?",
+        a: "Adobe Premiere Pro and After Effects for the craft, CapCut and Canva for speed, plus ChatGPT and AI-assisted tools for ideas and research.",
       },
       {
-        q: "Comment garantissez-vous la cohérence avec notre image de marque ?",
-        a: "Votre chef de projet garantit la DA et apprend de chaque retour pour ne jamais répéter deux fois la même correction.",
+        q: "Where does AI fit in?",
+        a: "As leverage, not replacement: AI accelerates repetitive and exploratory work while creative judgement stays human-led.",
       },
     ],
   },
   {
-    heading: "💡 Et, si je veux…",
+    heading: "💡 And next…",
     items: [
       {
-        q: "Je veux etre accompagné pour le tournage des vidéos.",
-        a: "Tournage dès la demi-journée, ou création complète de votre studio maison rentabilisé en 10-15 tournages.",
+        q: "What is being learned right now?",
+        a: "Motion design and motion graphics through continued After Effects practice — deliberately developing, not yet a mastered discipline.",
       },
       {
-        q: "Je veux la fiabilité d'une équipe mais rester libre et flexible.",
-        a: "Sans engagement : partez 3 mois, vous ne payez rien. 10 vidéos cette semaine ? On s'en charge.",
+        q: "What is the distribution thesis?",
+        a: "\u201CDistribution is 10 times more valuable than the product itself.\u201D Consistent distribution increases the surface area for opportunity — engineering luck.",
       },
       {
-        q: "Je veux augmenter mes ventes avec la vidéo.",
-        a: "Découverte, lien, vente : le mix parfait pour booster votre business.",
+        q: "Where is this heading long-term?",
+        a: "Toward creative direction and content-system ownership — helping founders and creators turn ideas into consistent content and distribution engines.",
       },
       {
-        q: "Je veux produire des contenus de manière régulière et à grande échelle.",
-        a: "+800 vidéos en 28 mois pour un streamer (1/jour TikTok), hebdo sans deadline manquée depuis 2 ans pour une youtubeuse.",
+        q: "What should the portfolio show?",
+        a: "Long-form edits, short-form repurposing, storytelling and pacing, raw-to-final production — progression and process, not just software skills.",
       },
     ],
   },
@@ -78,9 +78,9 @@ export default function Faq() {
     <section className="faq" id="faq">
       <div className="faq-l">
         <h2>
-          Vous avez
+          Have
           <br />
-          <em>une question ?</em>
+          <em>a question?</em>
         </h2>
       </div>
       <div className="faq-r">

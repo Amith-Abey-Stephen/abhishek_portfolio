@@ -1,7 +1,8 @@
-# Pilea Next — Video Editor Agency Site
+# Abhishek.D — Video Editor & Podcast Editor Portfolio
 
-A Next.js (App Router) port of the `scrap` static prototype: a dark, glassmorphism-style
-marketing site for a video-editing agency, pixel-faithful to the original HTML/CSS/JS.
+A Next.js (App Router) portfolio site with a dark, glassmorphism-style design:
+long-form podcast editing, short-form repurposing, career journey, working
+principles, toolkit, booking and FAQ.
 
 ## Getting started
 

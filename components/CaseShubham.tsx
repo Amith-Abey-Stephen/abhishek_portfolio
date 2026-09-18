@@ -13,11 +13,12 @@ export default function CaseShubham({
     <section className="case">
       <div className="case-top">
         <h2 className="sec-h left">
-          Ce qui a permis à<br />
-          <em>Shubham Sharma.</em>
+          The current chapter:
+          <br />
+          <em>the KPH Podcast.</em>
         </h2>
         <a className="dark-pill" href="#cta" onClick={open}>
-          Voir la vidéo
+          Work with me
         </a>
       </div>
       <div className="case-hero">
@@ -26,39 +27,39 @@ export default function CaseShubham({
           alt=""
         />
         <div className="case-tags">
-          <span>Youtubeur</span>
-          <span>Créateur de contenu</span>
-          <span>180 000 abonnés</span>
+          <span>Podcast</span>
+          <span>Long-form + Shorts</span>
+          <span>Weekly pipeline</span>
         </div>
       </div>
       <div className="case-split">
-        <div>De publier une des vidéos</div>
-        <div>Les plus vue de sa chaîne</div>
+        <div>One long conversation</div>
+        <div>Every platform fed</div>
       </div>
       <div className="invoice">
         <div className="inv-row">
-          <span>Total HT</span>
-          <b>860 €</b>
+          <span>Input</span>
+          <b>Raw podcast recording</b>
         </div>
         <div className="inv-row">
-          <span>Total TTC</span>
-          <b>1032 €</b>
+          <span>Output</span>
+          <b>Episode + clips, published</b>
         </div>
         <div className="inv-grid">
           <div>
-            👥 +5 000 abonnés
+            🎙 Full episodes
             <br />
-            <small>en une vidéo</small>
+            <small>edited end-to-end</small>
           </div>
           <div>
-            👁 32 500 h. de watchtime
+            ✂ Reels &amp; Shorts
             <br />
-            <small>4 300 h. en moyenne</small>
+            <small>repurposed weekly</small>
           </div>
           <div>
-            ▶ 1 / 10 classement
+            ▶ YouTube
             <br />
-            <small>par vue Youtube</small>
+            <small>published &amp; delivered</small>
           </div>
         </div>
       </div>
@@ -67,14 +68,15 @@ export default function CaseShubham({
           <img src="https://i.pravatar.cc/200?img=60" alt="" />
           <span className="t-play">▶</span>
         </div>
-        <div className="t-name">Shubam Sharma</div>
+        <div className="t-name">My working thesis</div>
         <p className="t-quote">
-          &quot;JB et son équipe, franchement sont des experts.
+          &quot;Distribution is 10 times more valuable than the product itself.
           <br />
-          Ils savent exactement comment fonctionne Youtube !&quot;
+          Consistent distribution increases the surface area for
+          opportunity.&quot;
         </p>
         <a href="#cta" className="cta-white" onClick={open}>
-          Prendre rendez-vous
+          Book a call
         </a>
       </div>
     </section>

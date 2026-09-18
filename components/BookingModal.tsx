@@ -33,13 +33,13 @@ export default function BookingModal({
       }}
     >
       <div className="modal-card">
-        <button className="m-x" onClick={onClose} aria-label="Fermer">
+          <button className="m-x" onClick={onClose} aria-label="Close">
           ✕
         </button>
         <h2>
-          Prenons un moment ensemble,
+          Let&apos;s take a moment,
           <br />
-          <em>pour discuter de votre prochaine vidéo.</em>
+          <em>to talk about your next video.</em>
         </h2>
         <BookingCalendar mini />
       </div>

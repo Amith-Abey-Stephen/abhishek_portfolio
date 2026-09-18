@@ -1,57 +1,57 @@
 const REVIEWS = [
   {
     img: "https://i.pravatar.cc/64?img=5",
-    name: "Nicolas Petit",
-    role: "Boucherie OhlaVache Reims",
-    text: "On a fait beaucoup de tournages récurrents dans la boucherie. Et, on a gagné avec ça des millions de vues et surtout beaucoup de clients.",
+    name: "Edit for the audience",
+    role: "Working principle",
+    text: "Not just the timeline: every cut is made for the person watching — what makes them stop, understand and keep watching.",
   },
   {
     img: "https://i.pravatar.cc/64?img=47",
-    name: "Lucie Marcolongo",
-    role: "Content Marketing Manager @MarkC",
-    text: "Jean-Baptiste est une personne très pro, empathique et a beaucoup d'expertise dans son domaine! N'hésitez pas à travailler avec lui",
+    name: "Preserve authenticity",
+    role: "Working principle",
+    text: "Shape pacing and structure without destroying what makes the conversation valuable in the first place.",
   },
   {
     img: "https://i.pravatar.cc/64?img=32",
-    name: "Lou Attal",
-    role: "Consultante certifiée Notion",
-    text: "Pilea m'aide pour beaucoup de choses. À commencer par ma chaîne Youtube, ils sont là depuis le début. Autant sur les conseils pour le matériel, que sur la production vidéo.",
+    name: "Think in systems",
+    role: "Working principle",
+    text: "One conversation becomes an episode, clips, promos and future ideas — never an isolated asset.",
   },
   {
     img: "https://i.pravatar.cc/64?img=15",
-    name: "Jérôme Colombain",
-    role: "Podcasteur @MondeNumérique",
-    text: "Une équipe dynamique, compétente et sérieuse. Super boulot !",
+    name: "Distribution is creative",
+    role: "Working principle",
+    text: "Publishing is part of the process: consistent distribution increases the surface area for opportunity.",
   },
   {
     img: "https://i.pravatar.cc/64?img=8",
-    name: "Frédéric Hermelin",
-    role: "Head of Communication",
-    text: "Un reportage photo / vidéo rondement mené tout en agilité pour une soirée officielle qui aura su marquer les esprits ! Et en bonus offert le speach du Ministre ! Un grand MERCI à l'équipe 👍",
+    name: "AI as leverage",
+    role: "Working principle",
+    text: "AI accelerates the repetitive and exploratory work — creative judgement stays human-led.",
   },
   {
     img: "https://i.pravatar.cc/64?img=44",
-    name: "Fanny Nusbaum",
-    role: "Essayiste, conférencière, chercheur, psychologue",
-    text: "Qu'est-ce que j'ai aimé avec Pilea ? Fiou, tellement de choses. Ils sont sympas, ils sont vraiment fiables, c'est super important. Très carré et en plus ultra créatifs ce qui ne gâche rien !",
+    name: "Own the outcome",
+    role: "Working principle",
+    text: "Not merely the task: from raw material to published video, the result is the responsibility.",
   },
   {
     img: "https://i.pravatar.cc/64?img=13",
-    name: "Querimont",
-    role: "Concept Store",
-    text: "L'agence a réussi à créer l'ensemble du projet, elle a su capter l'image du concept, le tout avec une grande autonomie.",
+    name: "Keep learning",
+    role: "Working principle",
+    text: "Motion design today, creative automation tomorrow — depth in editing, curiosity everywhere.",
   },
   {
     img: "https://i.pravatar.cc/64?img=26",
-    name: "SCP Béatrice Bosserelle",
-    role: "Commissaire de Justice",
-    text: "Merci pour la réactivité, le suivi, la disponibilité et la satisfaction du résultat. Je continuerai à faire appel",
+    name: "Engineering luck",
+    role: "Distribution thesis",
+    text: "\u201CDistribution is 10 times more valuable than the product itself\u201D — my personal working thesis.",
   },
   {
     img: "https://i.pravatar.cc/64?img=59",
-    name: "DaLorenzo",
-    role: "Ristorante ITALY",
-    text: "They made a great job, WITH love and Passion in this work !",
+    name: "Still becoming",
+    role: "Career statement",
+    text: "Learned how content works, then how to make it, then how to lead it — now building systems that help it travel.",
   },
 ];
 
@@ -59,9 +59,9 @@ export default function Reviews() {
   return (
     <section className="reviews">
       <h2 className="sec-h">
-        Ainsi, que de diffuser
+        What guides every edit
         <br />
-        <em>+ 10 000 publications sur tous les réseaux sociaux.</em>
+        <em>principles I cut by.</em>
       </h2>
       <div className="rev-grid">
         {REVIEWS.map((r) => (
