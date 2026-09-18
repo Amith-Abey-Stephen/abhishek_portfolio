@@ -1,19 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Scroll progress + nav state ---------- */
+  /* ---------- Scroll progress + nav state (condenses to logo pill like recording) ---------- */
   const prog = document.getElementById('scrollProgress');
   const nav = document.querySelector('.nav-wrap');
-  let lastY = 0;
   function onScrollBar() {
     const h = document.documentElement;
     const p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
     if (prog) prog.style.transform = `scaleX(${p})`;
     const y = h.scrollTop;
     nav.classList.toggle('scrolled', y > 40);
-    if (y > 500 && y > lastY + 4) nav.classList.add('nav-hidden');
-    else if (y < lastY - 4 || y < 500) nav.classList.remove('nav-hidden');
-    lastY = y;
+    nav.classList.toggle('condensed', y > 120);
   }
   addEventListener('scroll', onScrollBar, { passive: true }); onScrollBar();
 
@@ -44,33 +41,74 @@ document.addEventListener('DOMContentLoaded', () => {
       io.observe(el);
     });
   });
+  // clear entrance fill so later transforms (magnetic/parallax) win
+  document.querySelectorAll('.hero-h1, .hero-sub, .hero-cta, .hero-stage, .nav-wrap').forEach(el => {
+    el.addEventListener('animationend', e => {
+      if (e.animationName === 'heroUp' || e.animationName === 'heroScale') el.style.animation = 'none';
+    });
+  });
   // case-hero inview for image zoom-out
   const cio = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) e.target.classList.add('inview');
   }), { threshold: 0.3 });
   document.querySelectorAll('.case-hero').forEach(el => cio.observe(el));
 
-  /* ---------- Hero mouse parallax + tilt ---------- */
+  /* ---------- Hero mouse parallax + tilt (section 1) ---------- */
   const stage = document.querySelector('.hero-stage');
   const video = document.querySelector('.hero-video');
-  const left = document.querySelector('.fc-left');
-  const right = document.querySelector('.fc-right');
-  if (stage && !reduce && matchMedia('(pointer:fine)').matches) {
+  const cardL = document.querySelector('.fc-left');
+  const cardI = document.querySelector('.fc-info');
+  const cardF = document.querySelector('.fc-file');
+  const fine = matchMedia('(pointer:fine)').matches;
+  const mouseOwned = stage && !reduce && fine; // rAF loop owns card translate
+  let mCX = 0, mCY = 0;
+  if (stage && !reduce && fine) {
     let tx = 0, ty = 0, cx = 0, cy = 0;
     addEventListener('mousemove', e => {
       const r = stage.getBoundingClientRect();
       const px = (e.clientX - (r.left + r.width / 2)) / r.width;
       const py = (e.clientY - (r.top + r.height / 2)) / r.height;
-      tx = px; ty = py;
+      tx = Math.max(Math.min(px, 1), -1); ty = Math.max(Math.min(py, 1), -1);
     });
+    const cardScroll = (el, speed) => {
+      if (!el || reduce) return 0;
+      const r = el.getBoundingClientRect();
+      return -((r.top + r.height / 2 - innerHeight / 2) * speed);
+    };
     (function loop() {
       cx += (tx - cx) * 0.06; cy += (ty - cy) * 0.06;
-      if (video) video.style.transform = `perspective(1100px) rotateY(${cx * 5}deg) rotateX(${-cy * 5}deg)`;
-      if (left) left.style.translate = `${cx * -22}px ${cy * -16}px`;
-      if (right) right.style.translate = `${cx * 22}px ${cy * 16}px`;
+      mCX = cx; mCY = cy;
+      if (video) video.style.transform = `perspective(1200px) rotateY(${(cx * 4).toFixed(2)}deg) rotateX(${(-cy * 4).toFixed(2)}deg)`;
+      // translate property composes with rotate() transform + margin drift — no fights.
+      // mouse offset + scroll-parallax offset combined so the two never overwrite each other.
+      if (cardL) cardL.style.translate = `${(cx * -26).toFixed(1)}px ${(cy * -18 + cardScroll(cardL, -0.08)).toFixed(1)}px`;
+      if (cardI) cardI.style.translate = `${(cx * 24).toFixed(1)}px ${(cy * 14 + cardScroll(cardI, 0.12)).toFixed(1)}px`;
+      if (cardF) cardF.style.translate = `${(cx * 30).toFixed(1)}px ${(cy * 20 + cardScroll(cardF, -0.1)).toFixed(1)}px`;
       requestAnimationFrame(loop);
     })();
   }
+
+  /* ---------- Section-1 scroll parallax: layers drift at own speeds ---------- */
+  const plxEls = [...document.querySelectorAll('#hero [data-plx]')];
+  const heroH1 = document.querySelector('.hero-h1');
+  const heroSub = document.querySelector('.hero-sub');
+  const heroCta = document.querySelector('.hero-cta');
+  function heroParallax() {
+    if (reduce) return;
+    const vh = innerHeight;
+    plxEls.forEach(el => {
+      if (el.classList.contains('float-card') && mouseOwned) return; // owned by mouse loop (combined)
+      const r = el.getBoundingClientRect();
+      const off = (r.top + r.height / 2 - vh / 2) * parseFloat(el.dataset.plx || 0);
+      el.style.translate = `0px ${(-off).toFixed(1)}px`;
+    });
+    // headline fades + rises faster as video scrolls (matches recording)
+    const hr = document.querySelector('.hero-stage').getBoundingClientRect();
+    const p = Math.min(Math.max(-hr.top / vh + 0.15, 0), 1);
+    const fade = Math.max(1 - p * 1.6, 0);
+    [heroH1, heroSub, heroCta].forEach(el => { if (el) el.style.opacity = fade.toFixed(2); });
+  }
+  addEventListener('scroll', heroParallax, { passive: true });
 
   /* ---------- Scroll-linked effects (rAF) ---------- */
   const caseHeros = [...document.querySelectorAll('.case-hero')];
@@ -131,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Magnetic buttons ---------- */
   if (matchMedia('(pointer:fine)').matches && !reduce) {
-    document.querySelectorAll('.cta-white, .nav-btn, .dark-pill, .hv-play').forEach(el => {
+    document.querySelectorAll('.hero-cta .cta-white, .nav-btn, .dark-pill').forEach(el => {
       el.classList.add('mag');
       el.addEventListener('mousemove', e => {
         const r = el.getBoundingClientRect();

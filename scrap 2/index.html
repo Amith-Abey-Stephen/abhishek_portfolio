@@ -7,7 +7,7 @@
 <meta name="description" content="Montage vidéo pour entrepreneurs, créateurs & entreprises. Tout inclus & retours illimités.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Mona+Sans:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,45 +28,85 @@
 </header>
 
 <main>
-<!-- HERO -->
-<section class="hero">
+<!-- HERO / SECTION 1 -->
+<section class="hero" id="hero">
   <div class="guides"><i class="gl"></i><i class="gr"></i></div>
-  <h1 class="hero-h1">On crée vos<br><em>contenus vidéo.</em></h1>
-  <p class="hero-sub">Tout inclus, prix fixes &amp; retours illimités.</p>
-  <a href="#cta" class="cta-white" data-modal-open>Prendre rendez-vous</a>
+  <h1 class="hero-h1" data-plx="0.25">On crée vos<br><em>contenus vidéo.</em></h1>
+  <p class="hero-sub" data-plx="0.3">Tout inclus, prix fixes &amp; retours illimités.</p>
+  <div class="hero-cta" data-plx="0.32"><a href="#cta" class="cta-white" data-modal-open>Prendre rendez-vous</a></div>
 
-  <div class="hero-stage">
-    <div class="hero-hline"></div>
-    <!-- left comments -->
-    <div class="float-card fc-left">
+  <div class="hero-stage" data-plx="0.02">
+    <div class="hero-hline top"></div>
+    <!-- left Frame.io comments -->
+    <div class="float-card fc-left" data-plx="-0.08">
       <div class="fc-row">
-        <div class="fc-ava">🌐</div>
-        <div><div class="fc-name">Acme Labs</div><div class="fc-time">02:06</div>
-        <div class="fc-txt">La première partie est parfaite !<br>C'est validé</div><div class="fc-reply">Reply 👍</div></div>
+        <div class="fc-id"><span class="fc-globe">🌐</span><span class="fc-name">Acme Labs</span></div>
+        <div class="fc-time">03:12</div>
+        <div class="fc-txt">J'aime beaucoup cette transition !</div>
+        <div class="fc-reply">Reply&nbsp;&nbsp;👍</div>
       </div>
       <div class="fc-sep"></div>
       <div class="fc-row">
-        <div class="fc-ava">🌐</div>
-        <div><div class="fc-name">Acme Labs</div><div class="fc-time">06:17</div>
-        <div class="fc-txt">Super idée de mettre les deux plans côte à côte à ce moment-là !</div><div class="fc-reply">Reply 👍</div></div>
+        <div class="fc-id"><span class="fc-globe">🌐</span><span class="fc-name">Acme Labs</span></div>
+        <div class="fc-time">06:54</div>
+        <div class="fc-txt">Possible d'ajouter des émojis sur les sous-titres ?</div>
+        <div class="fc-reply">Reply&nbsp;&nbsp;👍</div>
+      </div>
+      <div class="fc-sep"></div>
+      <div class="fc-row">
+        <div class="fc-id"><span class="fc-globe">🌐</span><span class="fc-name">Acme Labs</span></div>
+        <div class="fc-time">02:06</div>
+        <div class="fc-txt">La première partie est parfaite !<br>C'est validé</div>
+        <div class="fc-reply">Reply&nbsp;&nbsp;👍</div>
       </div>
     </div>
     <!-- center video -->
     <div class="hero-video" data-modal-open>
-      <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1600&auto=format&fit=crop" alt="Studio Pilea">
+      <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1800&auto=format&fit=crop" alt="Studio Pilea — Jean-Baptiste face caméra">
       <div class="hv-shade"></div>
-      <button class="hv-play" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
-      <div class="hv-top">Jean-Baptiste Rogé <span>• 18 sept. 2026</span></div>
+      <div class="hv-cap left"><b>Montage</b><em>vidéo</em></div>
+      <div class="hv-cap right"><b>Création</b><em><small>de</small> contenu</em></div>
+      <button class="hv-play" aria-label="Lire la vidéo"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
     </div>
-    <!-- right info -->
-    <div class="float-card fc-right">
-      <div class="fc-head">ⓘ Informations</div>
-      <div class="fc-badges"><span>◷ 1:10</span><span>⇩ 9MB</span><span>❐ 1920x1080</span><span>≡ MPEG4, H.264</span></div>
-      <div class="fc-status"><span>État de la vidéo</span><b>Prêt à être publié</b></div>
-      <div class="fc-status"><span>Plateforme de publication</span><div class="fc-plats"><i>LinkedIn</i><i>Youtube</i><i>Instagram</i><i>TikTok</i><i>Facebook</i></div></div>
-      <div class="fc-status row"><span>Édition finale</span><b class="check">✓</b></div>
+    <!-- right top: Informations -->
+    <div class="float-card fc-info" data-plx="0.12">
+      <div class="fc-head"><span class="fc-i">ⓘ</span> Informations</div>
+      <div class="fc-badges"><span>◷ 1:10</span><span>⤓ 9MB</span><span>❐ 1920x1080</span><span>≡ MPEG4, H.264</span></div>
     </div>
-    <div class="hero-file">AcmeLabs_023_VDEF.mp4</div>
+    <!-- right bottom: file card -->
+    <div class="float-card fc-file" data-plx="-0.1">
+      <div class="ff-name">AcmeLabs_023_VDEF.mp4</div>
+      <div class="ff-author">Jean-Baptiste Rogé&nbsp;&nbsp;•&nbsp;&nbsp;18 sept. 2026</div>
+      <div class="ff-sec"><span class="ff-label">⚑ État de la vidéo</span><span class="ff-pill">Prêt à être publié</span></div>
+      <div class="ff-sec"><span class="ff-label">🖥 Plateforme de publication</span>
+        <div class="fc-plats"><i>◉ LinkedIn</i><i>▶ Youtube</i><i>◍ Instagram</i><i>♪ TikTok</i><i>f Facebook</i></div>
+      </div>
+      <div class="ff-foot"><span>Édition finale</span><b class="check">✓</b></div>
+    </div>
+    <div class="hero-hline bottom"></div>
+  </div>
+
+  <!-- logo strip directly under video -->
+  <div class="logo-strip" aria-hidden="true">
+    <div class="ls-track">
+      <span class="ls-script">Blooming YOU</span><span class="ls-bold">Papisy</span><span class="ls-logo">✣ STELLO</span><span class="ls-logo">▦ Querimont</span><span class="ls-logo">_UNDERSCORE_</span><span class="ls-logo">◍ PASSIAMAN</span><span class="ls-logo">LINAGORA</span><span class="ls-script">Blooming YOU</span><span class="ls-bold">Papisy</span><span class="ls-logo">✣ STELLO</span><span class="ls-logo">▦ Querimont</span><span class="ls-logo">_UNDERSCORE_</span><span class="ls-logo">◍ PASSIAMAN</span><span class="ls-logo">LINAGORA</span>
+    </div>
+  </div>
+  <div class="face-strip" aria-hidden="true">
+    <div class="fs-track">
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=59" alt=""><span><b>Miccode</b><small>+1.4M abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=15" alt=""><span><b>Matthias Frank</b><small>+14k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=53" alt=""><span><b>Wakz</b><small>+132k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=8" alt=""><span><b>Better Creating</b><small>+157k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=11" alt=""><span><b>Matthieu Stephani</b><small>+41k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=3" alt=""><span><b>Alexandre Calvez</b><small>+1.2M abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=59" alt=""><span><b>Miccode</b><small>+1.4M abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=15" alt=""><span><b>Matthias Frank</b><small>+14k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=53" alt=""><span><b>Wakz</b><small>+132k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=8" alt=""><span><b>Better Creating</b><small>+157k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=11" alt=""><span><b>Matthieu Stephani</b><small>+41k abonnés</small></span></span>
+      <span class="fs-pill"><img src="https://i.pravatar.cc/40?img=3" alt=""><span><b>Alexandre Calvez</b><small>+1.2M abonnés</small></span></span>
+    </div>
   </div>
 </section>
 
