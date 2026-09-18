@@ -1,61 +1,229 @@
-document.addEventListener('DOMContentLoaded',()=>{
-  // FAQ
-  document.querySelectorAll('.acc button').forEach(b=>b.addEventListener('click',()=>{
-    const it=b.parentElement; const was=it.classList.contains('open');
-    document.querySelectorAll('.acc').forEach(x=>x.classList.remove('open'));
-    if(!was) it.classList.add('open');
-  }));
-  // Modal
-  const modal=document.getElementById('modal');
-  document.querySelectorAll('[data-modal-open]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();modal.classList.add('open');document.body.style.overflow='hidden'}));
-  document.getElementById('mClose').addEventListener('click',closeM);
-  modal.addEventListener('click',e=>{if(e.target===modal)closeM()});
-  window.addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
-  function closeM(){modal.classList.remove('open');document.body.style.overflow=''}
-  document.getElementById('toTop').addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});
+document.addEventListener('DOMContentLoaded', () => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Calendar – September 2026 (Sept 1 = Tuesday)
-  // Build grid: MON..SUN, offset: Tue start => 1 empty (Mon)
-  const daysEl=document.getElementById('days');
-  const daysEl2=document.getElementById('days2');
-  const slotsEl=document.getElementById('slots');
-  const slotsEl2=document.getElementById('slots2');
-  const slotDay=document.getElementById('slotDay');
-  let selDay=24;
-  const highlighted=new Set([21,22,23,24,25,5,6,7,8,9]);
-  function renderDays(){
-    [daysEl,daysEl2].forEach(el=>{
-      if(!el) return; el.innerHTML='';
-      // leading blank for Mon (Sept 1 Tue => 1 blank)
-      const blank=document.createElement('span'); el.appendChild(blank);
-      for(let d=1;d<=30;d++){
-        const b=document.createElement('button');
-        b.textContent=d;
-        if(d<8) b.classList.add('dim');
-        if(highlighted.has(d)) b.classList.add('hl');
-        if(d===18) {b.classList.add('sel'); b.innerHTML='18<br style="line-height:0">•';}
-        if(d===selDay) b.classList.add('sel');
-        b.addEventListener('click',()=>{selDay=d; renderDays(); renderSlots();});
-        el.appendChild(b);
-      }
-      // oct overflow 1-11
-      for(let d=1;d<=11;d++){const b=document.createElement('button');b.textContent=d==1?'1':d;b.classList.add(d<=9&&highlighted.has(d)?'hl':'dim');if(d<=9&&[5,6,7,8,9].includes(d))b.classList.remove('dim');el.appendChild(b);}
+  /* ---------- Scroll progress + nav state ---------- */
+  const prog = document.getElementById('scrollProgress');
+  const nav = document.querySelector('.nav-wrap');
+  let lastY = 0;
+  function onScrollBar() {
+    const h = document.documentElement;
+    const p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+    if (prog) prog.style.transform = `scaleX(${p})`;
+    const y = h.scrollTop;
+    nav.classList.toggle('scrolled', y > 40);
+    if (y > 500 && y > lastY + 4) nav.classList.add('nav-hidden');
+    else if (y < lastY - 4 || y < 500) nav.classList.remove('nav-hidden');
+    lastY = y;
+  }
+  addEventListener('scroll', onScrollBar, { passive: true }); onScrollBar();
+
+  /* ---------- Reveal on scroll (staggered) ---------- */
+  const revealMap = [
+    ['.sec-h', 'rv', 0],
+    ['.feats > div', 'rv', 90],
+    ['.step', 'rv', 0],
+    ['.browser', 'rv-scale', 120],
+    ['.case-hero', 'rv-scale', 0],
+    ['.case-split, .invoice', 'rv', 0],
+    ['.testi', 'rv', 0],
+    ['.rev', 'rv', 60],
+    ['.logo-grid > span', 'rv', 25],
+    ['.juste', 'rv', 0],
+    ['.cal', 'rv-scale', 0],
+    ['.faq-r .acc, .faq-r h4', 'rv', 40],
+    ['.book-head', 'rv', 0],
+    ['.cta-center', 'rv', 0],
+  ];
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  revealMap.forEach(([sel, cls, stagger]) => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      el.classList.add(cls);
+      if (stagger) el.style.transitionDelay = Math.min(i * stagger, 600) + 'ms';
+      io.observe(el);
+    });
+  });
+  // case-hero inview for image zoom-out
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('inview');
+  }), { threshold: 0.3 });
+  document.querySelectorAll('.case-hero').forEach(el => cio.observe(el));
+
+  /* ---------- Hero mouse parallax + tilt ---------- */
+  const stage = document.querySelector('.hero-stage');
+  const video = document.querySelector('.hero-video');
+  const left = document.querySelector('.fc-left');
+  const right = document.querySelector('.fc-right');
+  if (stage && !reduce && matchMedia('(pointer:fine)').matches) {
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    addEventListener('mousemove', e => {
+      const r = stage.getBoundingClientRect();
+      const px = (e.clientX - (r.left + r.width / 2)) / r.width;
+      const py = (e.clientY - (r.top + r.height / 2)) / r.height;
+      tx = px; ty = py;
+    });
+    (function loop() {
+      cx += (tx - cx) * 0.06; cy += (ty - cy) * 0.06;
+      if (video) video.style.transform = `perspective(1100px) rotateY(${cx * 5}deg) rotateX(${-cy * 5}deg)`;
+      if (left) left.style.translate = `${cx * -22}px ${cy * -16}px`;
+      if (right) right.style.translate = `${cx * 22}px ${cy * 16}px`;
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  /* ---------- Scroll-linked effects (rAF) ---------- */
+  const caseHeros = [...document.querySelectorAll('.case-hero')];
+  const heroStage = document.querySelector('.hero-stage');
+  const glow = document.getElementById('pageGlow');
+  let mx = innerWidth / 2, my = 0;
+  addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+  function raf() {
+    const vh = innerHeight;
+    if (heroStage && !reduce) {
+      const r = heroStage.getBoundingClientRect();
+      const p = Math.min(Math.max(-r.top / vh, 0), 1);
+      heroStage.style.scale = `${1 - p * 0.04}`;
+    }
+    caseHeros.forEach(el => {
+      const r = el.getBoundingClientRect();
+      const p = Math.min(Math.max((vh - r.top) / (vh + r.height), 0), 1); // 0..1
+      const tilt = -6 + p * 6; // -6deg -> 0 like pilea scroll-straighten
+      el.style.setProperty('--tilt', tilt.toFixed(2) + 'deg');
+      el.style.setProperty('--lift', ((1 - p) * 30).toFixed(1) + 'px');
+    });
+    // scroll-velocity skew on work rows
+    if (glow) { glow.style.setProperty('--mx', (mx / innerWidth * 100) + '%'); glow.style.setProperty('--my', (my / 600 * 100) + '%'); }
+    requestAnimationFrame(raf);
+  }
+  if (!reduce) requestAnimationFrame(raf);
+
+  // skew work tracks with scroll velocity
+  let lastSY = scrollY, skew = 0;
+  const tracks = document.querySelectorAll('.w-track, .mq-track');
+  addEventListener('scroll', () => {
+    const v = scrollY - lastSY; lastSY = scrollY;
+    skew += v * 0.02;
+  }, { passive: true });
+  (function skewLoop() {
+    skew *= 0.92;
+    tracks.forEach(t => { t.style.skewX = `${Math.max(Math.min(skew, 6), -6)}deg`; });
+    requestAnimationFrame(skewLoop);
+  })();
+
+  /* ---------- Method timeline progress + active step ---------- */
+  const method = document.querySelector('.method');
+  const steps = [...document.querySelectorAll('.step')];
+  if (method) {
+    const bar = document.createElement('div'); bar.id = 'stepProgress'; method.appendChild(bar);
+    const line = () => {
+      const mr = method.getBoundingClientRect();
+      const top = 220, bottom = mr.height - 120;
+      const p = Math.min(Math.max((innerHeight * 0.55 - mr.top) / mr.height, 0), 1);
+      bar.style.top = top + 'px'; bar.style.height = (bottom - top) * p + 'px';
+    };
+    const sio = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { steps.forEach(s => s.classList.remove('active')); e.target.classList.add('active'); }
+    }), { threshold: 0.45 });
+    steps.forEach(s => sio.observe(s));
+    addEventListener('scroll', line, { passive: true }); line();
+  }
+
+  /* ---------- Magnetic buttons ---------- */
+  if (matchMedia('(pointer:fine)').matches && !reduce) {
+    document.querySelectorAll('.cta-white, .nav-btn, .dark-pill, .hv-play').forEach(el => {
+      el.classList.add('mag');
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2, y = e.clientY - r.top - r.height / 2;
+        el.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
   }
-  const times=['12:30pm','12:45pm','1:00pm','1:15pm','1:30pm','1:45pm','3:00pm','3:15pm','3:30pm','3:45pm'];
-  let selTime='1:15pm';
-  function renderSlots(){
-    const label=`Sept ${selDay}th`;
-    if(slotDay) slotDay.textContent='Thu '+selDay+'th';
-    [slotsEl,slotsEl2].forEach(el=>{
-      if(!el) return; el.innerHTML='';
-      times.forEach(t=>{
-        const b=document.createElement('button');b.textContent=t;
-        if(t===selTime)b.classList.add('sel');
-        b.addEventListener('click',()=>{selTime=t;renderSlots()});
+
+  /* ---------- Count-up invoice numbers ---------- */
+  const cio2 = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target; cio2.unobserve(el);
+    const txt = el.textContent;
+    const m = txt.replace(/\s/g, '').match(/(\d[\d\s]*)/);
+    if (!m) return;
+    const target = parseInt(m[1].replace(/\s/g, ''), 10);
+    if (!target || target < 50) return;
+    const t0 = performance.now(), dur = 1400;
+    (function tick(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      const e2 = 1 - Math.pow(1 - p, 3);
+      el.textContent = txt.replace(m[1], Math.round(target * e2).toLocaleString('fr-FR'));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }), { threshold: 0.6 });
+  document.querySelectorAll('.inv-grid div').forEach(el => cio2.observe(el));
+
+  /* ---------- FAQ (smooth, single-open per group heading) ---------- */
+  document.querySelectorAll('.faq-r .acc > button').forEach(b => b.addEventListener('click', () => {
+    const item = b.parentElement;
+    const was = item.classList.contains('open');
+    item.parentElement.querySelectorAll('.acc.open').forEach(x => x.classList.remove('open'));
+    if (!was) item.classList.add('open');
+  }));
+
+  /* ---------- Modal spring ---------- */
+  const modal = document.getElementById('modal');
+  const openM = e => { if (e) e.preventDefault(); modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const closeM = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-modal-open]').forEach(el => el.addEventListener('click', openM));
+  document.getElementById('mClose').addEventListener('click', closeM);
+  modal.addEventListener('click', e => { if (e.target === modal) closeM(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') closeM(); });
+  document.getElementById('toTop').addEventListener('click', e => { e.preventDefault(); scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
+
+  /* ---------- Calendar ---------- */
+  const daysEl = document.getElementById('days'), daysEl2 = document.getElementById('days2');
+  const slotsEl = document.getElementById('slots'), slotsEl2 = document.getElementById('slots2');
+  const slotDay = document.getElementById('slotDay');
+  let selDay = 24; const highlighted = new Set([21, 22, 23, 24, 25, 5, 6, 7, 8, 9]);
+  function renderDays() {
+    [daysEl, daysEl2].forEach(el => {
+      if (!el) return; el.innerHTML = '';
+      el.appendChild(document.createElement('span'));
+      for (let d = 1; d <= 30; d++) {
+        const b = document.createElement('button'); b.textContent = d;
+        if (d < 8) b.classList.add('dim');
+        if (highlighted.has(d)) b.classList.add('hl');
+        if (d === 18) b.innerHTML = '18<br style="line-height:0">•';
+        if (d === selDay) b.classList.add('sel');
+        b.addEventListener('click', () => { selDay = d; renderDays(); renderSlots(); });
+        el.appendChild(b);
+      }
+      for (let d = 1; d <= 11; d++) {
+        const b = document.createElement('button'); b.textContent = d;
+        b.classList.add(d <= 9 && highlighted.has(d) ? 'hl' : 'dim');
+        if ([5, 6, 7, 8, 9].includes(d)) b.classList.remove('dim');
+        el.appendChild(b);
+      }
+    });
+  }
+  const times = ['12:30pm', '12:45pm', '1:00pm', '1:15pm', '1:30pm', '1:45pm', '3:00pm', '3:15pm', '3:30pm', '3:45pm'];
+  let selTime = '1:15pm';
+  function renderSlots() {
+    if (slotDay) slotDay.textContent = 'Thu ' + selDay + 'th';
+    [slotsEl, slotsEl2].forEach(el => {
+      if (!el) return; el.innerHTML = '';
+      times.forEach(t => {
+        const b = document.createElement('button'); b.textContent = t;
+        if (t === selTime) b.classList.add('sel');
+        b.addEventListener('click', () => { selTime = t; renderSlots(); });
         el.appendChild(b);
       });
     });
   }
-  renderDays();renderSlots();
+  renderDays(); renderSlots();
+
+  /* ---------- Lazy image fade ---------- */
+  document.querySelectorAll('img').forEach(img => {
+    if (img.complete) return;
+    img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
+  });
 });

@@ -216,4 +216,125 @@ footer{border-top:1px solid var(--line);margin-top:40px;background:linear-gradie
 .m-x{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:#222;color:#fff;border:1px solid var(--line);cursor:pointer}
 .cal.mini{grid-template-columns:200px 1fr 200px}
 
+/* ============ ANIMATIONS (pilea.agency motion suite) ============ */
+.scroll-progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#fff,rgba(255,255,255,.35));z-index:300}
+/* hero entrance */
+@keyframes heroUp{from{opacity:0;transform:translateY(34px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes heroScale{from{opacity:0;transform:translateY(60px) scale(.94)}to{opacity:1;transform:none}}
+.hero-h1{animation:heroUp .9s cubic-bezier(.16,1,.3,1) .05s both}
+.hero-sub{animation:heroUp .9s cubic-bezier(.16,1,.3,1) .18s both}
+.hero .cta-white{animation:heroUp .9s cubic-bezier(.16,1,.3,1) .3s both}
+.hero-stage{animation:heroScale 1.1s cubic-bezier(.16,1,.3,1) .42s both}
+.nav-wrap{animation:heroUp .8s cubic-bezier(.16,1,.3,1) 0s both}
+/* nav scroll state */
+.nav-wrap.nav-hidden{transform:translateY(-110%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.nav-wrap{transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.nav-pill{transition:box-shadow .35s,background .35s,transform .35s}
+.nav-wrap.scrolled .nav-pill{background:rgba(12,12,14,.85);box-shadow:0 12px 40px rgba(0,0,0,.55)}
+/* scroll reveal */
+.rv{opacity:0;transform:translateY(34px);filter:blur(6px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s}
+.rv.in{opacity:1;transform:none;filter:blur(0)}
+.rv-l{opacity:0;transform:translateX(-40px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.rv-r{opacity:0;transform:translateX(40px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.rv-l.in,.rv-r.in{opacity:1;transform:none}
+.rv-scale{opacity:0;transform:scale(.92) translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1)}
+.rv-scale.in{opacity:1;transform:none}
+/* floating cards drift + mouse parallax */
+@keyframes drift1{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes drift2{0%,100%{translate:0 0}50%{translate:0 10px}}
+.fc-left{animation:drift1 6s ease-in-out infinite}
+.fc-right{animation:drift2 7s ease-in-out infinite}
+.hero-video{transition:transform .2s ease-out;transform-style:preserve-3d;will-change:transform}
+.hv-play{transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .3s}
+.hv-play::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(255,255,255,.25);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.25);opacity:0}}
+.hero-video:hover .hv-play{transform:translate(-50%,-50%) scale(1.12);background:rgba(255,255,255,.85);color:#000}
+.hero-video:hover .hv-play svg{fill:#000}
+/* magnetic buttons */
+.mag{transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .3s;will-change:transform;display:inline-block}
+.cta-white{position:relative;overflow:hidden}
+.cta-white::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);transition:left .6s}
+.cta-white:hover::before{left:130%}
+.dark-pill,.nav-btn{transition:transform .25s cubic-bezier(.16,1,.3,1),background .3s,border-color .3s}
+.dark-pill:hover,.nav-btn:hover{background:#26262a;border-color:rgba(255,255,255,.3)}
+/* marquees: pause on hover + scroll velocity skew */
+.marquee:hover .mq-track,.work-row:hover .w-track{animation-play-state:paused}
+.w-track{will-change:transform}
+.w-track img{transition:transform .5s cubic-bezier(.16,1,.3,1),filter .5s,border-color .4s}
+.w-track img:hover{transform:scale(1.05) translateY(-4px);filter:brightness(1.1);border-color:rgba(255,255,255,.3);z-index:2}
+.mq-pill{transition:transform .3s,background .3s,border-color .3s}
+.mq-pill:hover{transform:translateY(-3px) scale(1.04);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.25)}
+/* method scroll progress + active step */
+.method{position:relative}
+.method::before{content:"";position:absolute;left:39px;top:220px;bottom:120px;width:1px;background:rgba(255,255,255,.08)}
+#stepProgress{position:absolute;left:39px;top:220px;width:1px;background:linear-gradient(#fff,#888);transform-origin:50% 0;z-index:2}
+.step{transition:opacity .5s}
+.step .browser{transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s}
+.step.active .browser{transform:translateY(-4px);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.step .jour{transition:background .4s,border-color .4s,transform .4s}
+.step.active .jour{background:#1e1e22;border-color:rgba(255,255,255,.3);transform:scale(1.06)}
+.browser{will-change:transform}
+/* case tilt on scroll (JS sets --tilt) */
+.case-hero{transform:rotate(var(--tilt,-2.5deg)) translateY(var(--lift,0px));transition:transform .2s ease-out;will-change:transform}
+.case-hero img{transform:scale(1.08);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.case-hero.inview img{transform:scale(1)}
+.case-stack img{transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.case-stack:hover .s1{transform:rotate(-7deg) translateY(-8px)}
+.case-stack:hover .s2{transform:rotate(0deg) translateY(-12px) scale(1.03)}
+.case-stack:hover .s3{transform:rotate(8deg) translateY(-6px)}
+/* testimonial glow pulse */
+.testi{background:radial-gradient(520px 320px at 50% 28%,rgba(140,25,25,.32),transparent 70%)}
+.t-ava{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.t-ava:hover{transform:scale(1.06)}
+.t-ava::after{content:"";position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,rgba(255,60,60,.22),transparent 70%);z-index:-1;animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+/* reviews stagger handled via JS delay; hover lift */
+.rev{transition:transform .45s cubic-bezier(.16,1,.3,1),background .35s,border-color .35s,opacity .9s,filter .9s}
+.rev:hover{transform:translateY(-6px)!important;background:#141417;border-color:rgba(255,255,255,.2)}
+/* logo wall */
+.logo-grid span{transition:color .3s,transform .3s,opacity .3s}
+.logo-grid span:hover{color:#fff;transform:translateY(-3px) scale(1.06);opacity:1}
+.you{animation:breathe 3s ease-in-out infinite}
+.juste svg path{stroke-dasharray:200;stroke-dashoffset:200;animation:draw 2.4s ease forwards .3s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.juste p{animation:heroUp .9s cubic-bezier(.16,1,.3,1) both}
+/* booking */
+.cal{transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s}
+.cal:hover{box-shadow:0 30px 90px rgba(0,0,0,.65)}
+.days button,.slots button{transition:all .22s}
+.days button:hover:not(.dim){border:1px solid rgba(255,255,255,.4);transform:scale(1.08)}
+.slots button{position:relative;overflow:hidden}
+.slots button:hover{transform:translateX(3px)}
+.slots button.sel{animation:pop .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{0%{transform:scale(.94)}100%{transform:scale(1)}}
+/* FAQ smooth */
+.acc{transition:border-color .3s,background .3s}
+.acc:hover{border-color:rgba(255,255,255,.2)}
+.acc button span{transition:transform .35s cubic-bezier(.16,1,.3,1);display:inline-block}
+.acc.open button span{transform:rotate(180deg)}
+.acc .acc-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.16,1,.3,1)}
+.acc.open .acc-b{grid-template-rows:1fr}
+.acc-b> p{overflow:hidden}
+.acc.open{background:#151518;border-color:rgba(255,255,255,.16)}
+/* modal spring */
+.modal{opacity:0;transition:opacity .3s}
+.modal.open{opacity:1}
+.modal-card{transform:translateY(30px) scale(.95);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.modal.open .modal-card{transform:none}
+.m-x{transition:transform .3s,background .3s}
+.m-x:hover{transform:rotate(90deg);background:#333}
+/* feats icons */
+.feats div{transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.feats div:hover{transform:translateY(-5px)}
+.feats h4{transition:transform .3s}
+/* page glow follows cursor (JS sets --mx/--my) */
+.page-glow{background:radial-gradient(600px 320px at var(--mx,50%) var(--my,0%),rgba(120,45,45,.16),transparent 70%),radial-gradient(900px 500px at 50% 35%,rgba(120,20,20,.08),transparent 70%)}
+/* image fade-in on load */
+img{opacity:1}
+img[data-lazy]{opacity:0;transition:opacity .8s}
+img.loaded{opacity:1}
+/* count-up flash */
+.count{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}.rv,.rv-l,.rv-r,.rv-scale{opacity:1;transform:none;filter:none}}
+
 @media(max-width:1100px){.fc-left,.fc-right{display:none}.feats{grid-template-columns:1fr 1fr}.rev-grid{columns:2}.step{grid-template-columns:1fr}.step-l{position:static}.cal{grid-template-columns:1fr}.cal-l,.cal-r{border:0;border-top:1px solid var(--line)}.logo-grid{grid-template-columns:repeat(4,1fr)}.faq{grid-template-columns:1fr}.case-stack{height:auto;display:flex;flex-direction:column;gap:12px}.case-stack img{position:static;width:100%;transform:none;height:300px}.case-hero img{height:320px}}
